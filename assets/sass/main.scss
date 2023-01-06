@@ -1,0 +1,29 @@
+
+// @import url('https://fonts.cdnfonts.com/css/euclid-circular-b');
+
+@import "base/base";
+
+@import "components/courses";
+@import "components/puzzle-slider";
+@import "components/questions";
+@import "components/testimonials";
+@import "components/videos";
+@import "components/contact";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/course";
+@import "pages/articles";
+@import "pages/profile";
+
+
+.section-sponsors{
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 5.2rem;
+    margin-top: 4rem;
+}

@@ -1,0 +1,90 @@
+.section-claster{
+
+
+    &_courses{
+        padding: 2rem 0;
+    }
+ 
+    &_team{
+        margin: 0 auto;
+        display: flex;
+    align-items: center;
+    max-width: 71.4rem;
+    justify-content: space-between;
+    gap: 2rem;
+   
+    &--text{
+        max-width: 43.7rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        &_1{
+            font-family: 'Anek Latin';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 44px;
+letter-spacing: -0.02em;
+        }
+
+        &_2{
+            font-weight: 500;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: rgba(6, 22, 47, 0.6);
+    display: flex;
+    justify-content: end;
+ 
+        }
+
+    }
+    }
+ 
+ 
+    &_contact{
+        
+    margin-top: 8rem;
+       background: rgba(57, 112, 206, 0.1);
+       border: 1px solid #000000;
+       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+       border-radius: 32px;
+       padding: 5.2rem;
+       display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+
+    &--btn{
+        margin-top: 1.6rem;
+        background: #06162F;
+border-radius: 8px;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+text-decoration: none;
+
+/* #FFFFFF */
+
+
+    }
+
+
+    &--title{
+        font-family: 'Anek Latin';
+        font-weight: 700;
+font-size: 32px;
+line-height: 35px;
+text-align: center;
+letter-spacing: -0.02em;
+max-width: 37.8rem;
+    }
+
+    &--paragraph{
+        font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+    }
+ 
+    }
+ }

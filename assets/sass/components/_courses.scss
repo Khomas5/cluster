@@ -1,0 +1,99 @@
+
+.section-courses{
+
+   margin-top: 5.2rem;
+    &_titles{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+    
+        &_title{
+            font-family: 'Anek Latin';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+    
+        }
+    
+        &_seeAll{
+     
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    cursor: pointer;
+    color: rgba(6, 22, 47, 0.6);
+    
+        }
+      &_cards{
+        padding-top: 2.3rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.4rem;
+
+   
+        @media only screen and (max-width: $bp-large) {
+          grid-template-columns: repeat(2, 1fr);
+          
+      }
+
+  
+   
+      &--card{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      
+   position: relative;
+        
+    
+        &_img{
+          // width: 100%;
+            border: 1px solid rgba(6, 22, 47, 0.1);
+    border-radius: 16px;
+    padding: 3.4rem 0;
+    display: flex;
+    justify-content: center;
+        }
+      }    
+       &--mark{
+        &_text{
+         color: #FFFFFF; 
+         font-size: 1.4rem;
+         line-height: 1.8rem;
+         letter-spacing: -2%;
+         font-weight: 500;
+        }
+
+          &_yellow{
+            background-color: #FDD661;
+            position: absolute;
+            border-radius: 4px;
+            padding: 8px 12px;
+            right: -3px;
+            top: -3px;
+
+          
+
+
+          }
+          &_green{
+            background-color: #28BB90;
+          position: absolute;
+          border-radius: 4px;
+          padding: 8px 12px;
+          right: -3px;
+          top: -3px;
+
+
+
+          }
+        }
+       }
+    
+    }
+    

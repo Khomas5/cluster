@@ -1,11 +1,14 @@
 var swiper = new Swiper(".mySwiper", {
-    pagination: {
+
+  pagination: {
       el: ".swiper-pagination",
       clickable: true,
   
     },
     loop: true,
-  });
+    
+    },
+  );
 
 //   let answers = document.querySelectorAll(".accordion");
 // answers.forEach((event) => {
@@ -54,6 +57,15 @@ var swiper = new Swiper(".my-swiper", {
   
   },
   slidesPerView: 2,
+  breakpoints: {
+  
+    450: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1,
+    },
+  },
 loop: true,
     spaceBetween: 24,
 });

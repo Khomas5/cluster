@@ -13,9 +13,10 @@
             font-family: 'Anek Latin';
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 35px;
+    font-size: 3.2rem;
+    line-height: 3.5rem;
     letter-spacing: -0.02em;
+
     
         }
     
@@ -23,11 +24,12 @@
      
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 2rem;
+    line-height: 2.5rem;
     cursor: pointer;
     color: rgba(6, 22, 47, 0.6);
-    
+
+
         }
       &_cards{
         padding-top: 2.3rem;
@@ -40,6 +42,12 @@
           grid-template-columns: repeat(2, 1fr);
           
       }
+
+      @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+        
+    }
+      
 
   
    
@@ -58,6 +66,18 @@
     padding: 3.4rem 0;
     display: flex;
     justify-content: center;
+
+
+    img{
+          @media only screen and (max-width: $bp-smaller) {
+   max-width:10rem;
+
+
+  
+     
+  }
+    }
+
         }
       }    
        &--mark{

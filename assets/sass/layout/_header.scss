@@ -56,6 +56,10 @@
      
         
      }
+
+     @media only screen and (max-width: $bp-smaller) {
+      padding: 1.9rem 1.6rem;
+    }
    }
    &_logo{
        height: 5.2rem;
@@ -235,10 +239,7 @@
             }
       
         }
-        // &_lang-img{
-        //     width: 5.2rem;
-        //     height: 5.2rem;
-        // }
+  
     }
   }  
 
@@ -254,8 +255,7 @@
   z-index: 4;
 }
 
-.header input[type="checkbox"],
-.header .hamburger-lines {
+.header input[type="checkbox"]{
   display: none;
 }
 
@@ -348,12 +348,12 @@
 
     transition: all 600ms cubic-bezier(.62,.04,.3,1.56);
     transition-delay: 50ms;
-  padding-left: 15rem;
        transform: translateX(0px);
   display: flex;
   justify-content:center;
 
-  margin-top: 10rem ;
+  margin-top: 10rem;
+
   }
 
   .nav-open .open{

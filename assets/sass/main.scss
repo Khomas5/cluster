@@ -26,4 +26,21 @@
     gap: 2rem;
     margin-bottom: 5.2rem;
     margin-top: 4rem;
+
+    img{
+
+        @media only screen and (max-width: $bp-smaller) {
+            
+            max-height: 2rem;
+          }
+
+          @media only screen and (max-width: $bp-medium) {
+            
+            max-height: 3rem;
+          }
+          @media only screen and (max-width: $bp-large) {
+            
+            max-height: 3.6rem;
+          }
+    }
 }

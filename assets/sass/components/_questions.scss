@@ -24,7 +24,12 @@ background: #FFFFFF;
 // border: 1px solid rgba(6, 22, 47, 0.1);
 border-radius: 12px;
 
+@media only screen and (max-width: $bp-smaller) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
 
+  }
 
 
   }
@@ -85,6 +90,11 @@ font-weight: 700;
 font-size: 24px;
 line-height: 26px;
 letter-spacing: -0.02em;
+
+@media only screen and (max-width: $bp-smaller) {
+    font-size: 18px;
+    line-height: 20px;
+  }
     }
 
     .question-h2{
@@ -93,6 +103,15 @@ letter-spacing: -0.02em;
         font-size: 32px;
         line-height: 35px;
         letter-spacing: -0.02em;
+
+        
+        @media only screen and (max-width: $bp-smaller) {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 20px;
+        
+          }
+        
     }
 
     &_container{
@@ -146,6 +165,12 @@ letter-spacing: -0.02em;
            
             gap: 16px;
 
+            @media only screen and (max-width: $bp-smaller) {
+          gap: 0.8rem;
+            
+                
+            }
+                
 
         .btn{
            
@@ -167,9 +192,23 @@ border: none;
 transition: .2s;
 cursor: pointer;
 
+
+
 &:hover{
     transform: translateY(-3px);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
+@media only screen and (max-width: $bp-smaller) {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+
+    padding: 1.6rem 2rem;
+
+
+    
 }
         }
         .call-btn{

@@ -13,18 +13,29 @@
     justify-content: space-between;
     gap: 2rem;
    
+     
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column; 
+    }
+
+
     &--text{
         max-width: 43.7rem;
         display: flex;
         flex-direction: column;
         gap: 2.4rem;
 
+            
+    @media only screen and (max-width: $bp-medium) {
+    max-width: 100%;
+      }
+
         &_1{
             font-family: 'Anek Latin';
 font-style: normal;
 font-weight: 700;
-font-size: 40px;
-line-height: 44px;
+font-size: 4rem;
+line-height: 4.4rem;
 letter-spacing: -0.02em;
         }
 
@@ -46,9 +57,8 @@ letter-spacing: -0.02em;
         
     margin-top: 8rem;
        background: rgba(57, 112, 206, 0.1);
-       border: 1px solid #000000;
-       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-       border-radius: 32px;
+  
+       border-radius: 3.2rem;
        padding: 5.2rem;
        display: flex;
     flex-direction: column;
@@ -60,8 +70,8 @@ letter-spacing: -0.02em;
         background: #06162F;
 border-radius: 8px;
 font-weight: 600;
-font-size: 16px;
-line-height: 20px;
+font-size: 1.6rem;
+line-height: 2rem;
 text-decoration: none;
 
 /* #FFFFFF */
@@ -73,17 +83,31 @@ text-decoration: none;
     &--title{
         font-family: 'Anek Latin';
         font-weight: 700;
-font-size: 32px;
-line-height: 35px;
+font-size: 3.2rem;
+line-height: 3.5rem;
 text-align: center;
 letter-spacing: -0.02em;
 max-width: 37.8rem;
+
+    
+@media only screen and (max-width: $bp-medium) {
+    max-width: 100%;
+
+
     }
+
+    
+} 
 
     &--paragraph{
         font-weight: 400;
-font-size: 16px;
-line-height: 26px;
+font-size: 1.6rem;
+line-height: 2.6rem;
+
+    
+@media only screen and (max-width: $bp-medium) {
+  text-align: center;
+  }
     }
  
     }

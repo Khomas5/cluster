@@ -6,7 +6,11 @@
         height: 100%;
         height: 67vh;
         background-size: cover;
-
+       
+        @media only screen and (max-width: $bp-medium) {
+            height: 60vh;     
+               
+           }
         
         .tablet-margin{
 
@@ -19,8 +23,19 @@
         // display: flex;
         // justify-content: start;
         // align-items: flex-start;
-        
-        
+        @media only screen and (max-width: $bp-medium) {
+         width: 100%;
+     
+      
+            
+        }
+        @media only screen and (max-width: $bp-smallest) {
+            justify-content: center;
+       align-items: flex-end;
+       padding-bottom: 4rem;
+         
+               
+           }
  }
  &_btn{
     cursor: pointer;
@@ -31,8 +46,8 @@
     font-family: 'Product Sans';
 font-style: normal;
 font-weight: 400;
-font-size: 16px;
-line-height: 19px;
+font-size: 1.6rem;
+line-height: 1.9rem;
 
 /* White */
 
@@ -49,13 +64,21 @@ text-decoration: none;
         max-width: 39.5rem;
         gap: 2.3rem;
 
+        // @media only screen and (max-width: $bp-medium) {
+        //     max-width: 43.5rem;
+
+     
+      
+            
+        // }
+
         &--title{
 
             font-family: "Euclid Circular B";
 
             font-weight: 700;
-font-size: 48px;
-line-height: 61px;
+font-size: 4.8rem;
+line-height: 6.1rem;
 
 /* White */
 
@@ -66,8 +89,8 @@ color: #FFFFFF;
             font-family: 'Euclid Circular B';
 font-style: normal;
 font-weight: 400;
-font-size: 18px;
-line-height: 30px;
+font-size: 1.8rem;
+line-height: 3rem;
 /* or 167% */
 
 
@@ -88,17 +111,38 @@ margin-top: 7rem;
               grid-template-columns: repeat(2, auto);
           gap: 5.2rem;
               grid-template-rows: repeat(4, auto);   
+
+
+              @media only screen and (max-width: $bp-small) {
+                grid-template-columns: 1fr;
+                justify-items: center;
+         
+          
+                
+            }
+            
       }
 
       
 
     &_blog{
         max-width: 54rem;
+        @media only screen and (max-width: $bp-small) {
+  max-width: 100%;
+      
+            
+        }
   
 
         &--1{ 
             grid-column: 1;
           grid-row: 1 / span 3;
+
+          
+          @media only screen and (max-width: $bp-small) {
+            grid-row: 1;
+            
+        }
         }
 
         &--2{
@@ -106,6 +150,11 @@ margin-top: 7rem;
 
    
             grid-row: 4/ span 2;
+
+            @media only screen and (max-width: $bp-small) {
+                grid-row: 2;
+                
+            }
         }
 
         &--3{
@@ -113,6 +162,12 @@ margin-top: 7rem;
         margin-top: 5.2rem;
  
             grid-row: 1/ span 4;
+
+            @media only screen and (max-width: $bp-small) {
+                grid-column: 1;
+                grid-row: 3;
+                
+            }
         }
 
 
@@ -121,12 +176,25 @@ margin-top: 7rem;
             margin-top: 5.2rem;
         
             grid-row: 4 / span 3;
+
+            @media only screen and (max-width: $bp-small) {
+                grid-column: 1;
+                grid-row: 4;
+                
+            }
         }
 
         &--img{
             width: 100%;
             max-height: 25.7rem;
             max-width: 54rem;
+
+            @media only screen and (max-width: $bp-small) {
+            max-width: 100%;
+         
+          
+                
+            }
         }
         &--btn{
             display: flex;
@@ -135,8 +203,8 @@ margin-top: 7rem;
        font-family: 'Product Sans';
 font-style: normal;
 font-weight: 400;
-font-size: 18px;
-line-height: 22px;
+font-size: 1.8rem;
+line-height: 2.2rem;
 /* identical to box height */
 
 
@@ -165,8 +233,8 @@ gap: 0.6rem;
     border: 1px solid rgba(6, 22, 47, 0.2);
     text-decoration: none;
     font-weight: 600;
-font-size: 16px;
-line-height: 20px;
+font-size: 1.6rem;
+line-height: 2rem;
 font-family: 'Euclid Circular B';
 
 color: #06162F;

@@ -1,0 +1,121 @@
+.course-details.tablet-margin{
+// display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5.2rem;
+
+    .info-course{
+
+        .description{
+            margin-bottom: 4rem;
+
+            &_text{
+                padding-top: 2.4rem;
+                padding-bottom: 4rem;
+                font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+/* or 162% */
+
+
+color: rgba(6, 22, 47, 0.6);
+
+            }
+            &_instructor{
+                display: flex;
+                background: rgba(6, 22, 47, 0.03);
+border-radius: 12px;
+padding: 3.2rem;
+gap: 3.2rem;
+
+&--info{
+
+    &_word{
+        font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+letter-spacing: -0.02em;
+
+color: #3970CE;
+    }
+}
+            }
+
+        }
+        .feedback{
+            margin-bottom: 4rem;
+
+    
+            &_title{
+                font-family: 'Anek Latin';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 22px;
+
+
+letter-spacing: -0.02em;
+            }
+
+            &_number{
+        
+font-weight: 500;
+color: rgba(6, 22, 47, 0.5);
+
+            }
+            &_cards{
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+                &--card{
+
+                    background: #FFFFFF;
+border: 1px solid rgba(6, 22, 47, 0.1);
+border-radius: 16px;
+padding: 2.4rem 2.4rem 3.2rem;
+
+                    &_person{
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        &_cards{
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr;
+
+            &--card{
+                max-width: 42.3rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.8rem;
+              
+       
+
+                &_img{
+                    border: 1px solid rgba(6, 22, 47, 0.1);
+                    border-radius: 16px;
+                    padding: 3.4rem 0;
+                    display: flex;
+                    justify-content: center;
+                
+                
+                }
+     
+            }
+
+        }
+    }
+
+    &_buy{
+        
+background: #FFFFFF;
+border: 1px solid rgba(6, 22, 47, 0.1);
+border-radius: 12px;
+    }
+}
+
+  

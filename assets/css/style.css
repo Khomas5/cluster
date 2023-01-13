@@ -18,8 +18,14 @@ html {
   font-size: 62.5%; }
   @media only screen and (max-width: 75em) {
     html {
+      font-size: 55%; } }
+  @media only screen and (max-width: 62.5em) {
+    html {
       font-size: 50%; } }
   @media only screen and (max-width: 50em) {
+    html {
+      font-size: 45%; } }
+  @media only screen and (max-width: 37.5em) {
     html {
       font-size: 40%; } }
 
@@ -178,7 +184,7 @@ html {
     @media only screen and (max-width: 62.5em) {
       .section-courses_cards {
         grid-template-columns: repeat(2, 1fr); } }
-    @media only screen and (max-width: 34.5em) {
+    @media only screen and (max-width: 37.5em) {
       .section-courses_cards {
         grid-template-columns: 1fr; } }
     .section-courses_cards--card {
@@ -1145,26 +1151,92 @@ html {
       .section-claster_contact--paragraph {
         text-align: center; } }
 
+.course-details.tablet-margin {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5.2rem; }
+  .course-details.tablet-margin .info-course .description {
+    margin-bottom: 4rem; }
+    .course-details.tablet-margin .info-course .description_text {
+      padding-top: 2.4rem;
+      padding-bottom: 4rem;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      /* or 162% */
+      color: rgba(6, 22, 47, 0.6); }
+    .course-details.tablet-margin .info-course .description_instructor {
+      display: flex;
+      background: rgba(6, 22, 47, 0.03);
+      border-radius: 12px;
+      padding: 3.2rem;
+      gap: 3.2rem; }
+      .course-details.tablet-margin .info-course .description_instructor--info_word {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: -0.02em;
+        color: #3970CE; }
+  .course-details.tablet-margin .info-course .feedback {
+    margin-bottom: 4rem; }
+    .course-details.tablet-margin .info-course .feedback_title {
+      font-family: 'Anek Latin';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 22px;
+      letter-spacing: -0.02em; }
+    .course-details.tablet-margin .info-course .feedback_number {
+      font-weight: 500;
+      color: rgba(6, 22, 47, 0.5); }
+    .course-details.tablet-margin .info-course .feedback_cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem; }
+      .course-details.tablet-margin .info-course .feedback_cards--card {
+        background: #FFFFFF;
+        border: 1px solid rgba(6, 22, 47, 0.1);
+        border-radius: 16px;
+        padding: 2.4rem 2.4rem 3.2rem; }
+        .course-details.tablet-margin .info-course .feedback_cards--card_person {
+          display: flex; }
+  .course-details.tablet-margin .info-course_cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr; }
+    .course-details.tablet-margin .info-course_cards--card {
+      max-width: 42.3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem; }
+      .course-details.tablet-margin .info-course_cards--card_img {
+        border: 1px solid rgba(6, 22, 47, 0.1);
+        border-radius: 16px;
+        padding: 3.4rem 0;
+        display: flex;
+        justify-content: center; }
+  .course-details.tablet-margin_buy {
+    background: #FFFFFF;
+    border: 1px solid rgba(6, 22, 47, 0.1);
+    border-radius: 12px; }
+
 .article-carousel {
   background-image: url(../img/events/blog1.png);
   width: 100%;
   height: 100%;
   height: 67vh;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
   @media only screen and (max-width: 50em) {
     .article-carousel {
-      height: 60vh; } }
+      height: 60vh;
+      background-position: center;
+      background-image: url(../img/events/responsiveBlog.png); } }
   .article-carousel .tablet-margin {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     height: 100%; }
     @media only screen and (max-width: 50em) {
       .article-carousel .tablet-margin {
-        width: 100%; } }
-    @media only screen and (max-width: 23.5em) {
-      .article-carousel .tablet-margin {
-        justify-content: center;
         align-items: flex-end;
         padding-bottom: 4rem; } }
   .article-carousel_btn {
@@ -1184,9 +1256,13 @@ html {
   .article-carousel_text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     color: #FFFFFF;
-    max-width: 39.5rem;
+    max-width: 43.5rem;
     gap: 2.3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .article-carousel_text {
+        max-width: 100%; } }
     .article-carousel_text--title {
       font-family: "Euclid Circular B";
       font-weight: 700;
@@ -1211,48 +1287,50 @@ html {
     grid-template-columns: repeat(2, auto);
     gap: 5.2rem;
     grid-template-rows: repeat(4, auto); }
-    @media only screen and (max-width: 34.5em) {
+    @media only screen and (max-width: 37.5em) {
       .articles .tablet-margin {
         grid-template-columns: 1fr;
         justify-items: center; } }
   .articles_blog {
     max-width: 54rem; }
-    @media only screen and (max-width: 34.5em) {
+    @media only screen and (max-width: 37.5em) {
       .articles_blog {
         max-width: 100%; } }
     .articles_blog--1 {
       grid-column: 1;
       grid-row: 1 / span 3; }
-      @media only screen and (max-width: 34.5em) {
+      @media only screen and (max-width: 37.5em) {
         .articles_blog--1 {
           grid-row: 1; } }
     .articles_blog--2 {
       grid-column: 1;
       grid-row: 4/ span 2; }
-      @media only screen and (max-width: 34.5em) {
+      @media only screen and (max-width: 37.5em) {
         .articles_blog--2 {
           grid-row: 2; } }
     .articles_blog--3 {
       grid-column: 2;
       margin-top: 5.2rem;
       grid-row: 1/ span 4; }
-      @media only screen and (max-width: 34.5em) {
+      @media only screen and (max-width: 37.5em) {
         .articles_blog--3 {
           grid-column: 1;
-          grid-row: 3; } }
+          grid-row: 3;
+          margin-top: 0; } }
     .articles_blog--4 {
       grid-column: 2;
       margin-top: 5.2rem;
       grid-row: 4 / span 3; }
-      @media only screen and (max-width: 34.5em) {
+      @media only screen and (max-width: 37.5em) {
         .articles_blog--4 {
           grid-column: 1;
-          grid-row: 4; } }
+          grid-row: 4;
+          margin-top: 0; } }
     .articles_blog--img {
       width: 100%;
       max-height: 25.7rem;
       max-width: 54rem; }
-      @media only screen and (max-width: 34.5em) {
+      @media only screen and (max-width: 37.5em) {
         .articles_blog--img {
           max-width: 100%; } }
     .articles_blog--btn {
@@ -1289,6 +1367,62 @@ html {
       .articles_btn--button:hover {
         transform: translateY(-2px);
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
+
+.main-article {
+  max-width: 89.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem; }
+  .main-article_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; }
+    .main-article_container--text {
+      font-size: 1.6rem;
+      line-height: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem; }
+    .main-article_container--main-title {
+      font-family: 'Anek Latin';
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 44px;
+      letter-spacing: -0.02em; }
+    .main-article_container--title {
+      display: flex;
+      justify-content: space-between; }
+      @media only screen and (max-width: 50em) {
+        .main-article_container--title {
+          flex-direction: column;
+          gap: 2rem; } }
+    .main-article_container--icons {
+      display: flex;
+      gap: 2.4rem; }
+  .main-article_blog--text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    /* or 144% */
+    color: rgba(6, 22, 47, 0.7); }
+
+.article {
+  margin-top: 7rem;
+  max-width: 89.8rem; }
+  .article_blogs {
+    margin-top: 3.2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .article_blogs {
+        grid-template-columns: 1fr;
+        max-width: 55rem; } }
+    .article_blogs--img {
+      width: 100%;
+      height: 100%;
+      max-height: 25.7rem; }
 
 .section-border {
   border: 1px solid #ECECEF; }

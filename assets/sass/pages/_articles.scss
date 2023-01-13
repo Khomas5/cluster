@@ -1,36 +1,44 @@
 .article-carousel {
         background-image: url(../img/events/blog1.png);
+           
 
         // width: 100vw;
         width: 100%;
         height: 100%;
         height: 67vh;
         background-size: cover;
-       
+          background-position: center;
         @media only screen and (max-width: $bp-medium) {
             height: 60vh;     
+            // background-image: url(../../img/events/blog2.png);
+            background-position: center;
+ background-image: url(../img/events/responsiveBlog.png);
                
-           }
+           } 
+           
+        //    @media only screen and (max-width: $bp-smallest) {
+
+    
+            
+        //    }
+
+           
+
         
         .tablet-margin{
 
        display: flex;
-       justify-content: flex-start;
-       align-items: center;
+    //    justify-content: flex-start;
+    //    align-items: center;
        height: 100%;
 
         // height: 70vh;
         // display: flex;
         // justify-content: start;
         // align-items: flex-start;
+
         @media only screen and (max-width: $bp-medium) {
-         width: 100%;
-     
-      
-            
-        }
-        @media only screen and (max-width: $bp-smallest) {
-            justify-content: center;
+        
        align-items: flex-end;
        padding-bottom: 4rem;
          
@@ -59,9 +67,10 @@ text-decoration: none;
         flex-direction: column;
         // justify-content: flex-start;
         // align-items: flex-start;
+        justify-content: center;
         
         color: #FFFFFF;
-        max-width: 39.5rem;
+        max-width: 43.5rem;
         gap: 2.3rem;
 
         // @media only screen and (max-width: $bp-medium) {
@@ -71,6 +80,13 @@ text-decoration: none;
       
             
         // }
+
+
+        @media only screen and (max-width: $bp-small) {
+        
+         max-width: 100%;
+                    
+                }
 
         &--title{
 
@@ -166,6 +182,7 @@ margin-top: 7rem;
             @media only screen and (max-width: $bp-small) {
                 grid-column: 1;
                 grid-row: 3;
+                margin-top: 0;
                 
             }
         }
@@ -180,6 +197,7 @@ margin-top: 7rem;
             @media only screen and (max-width: $bp-small) {
                 grid-column: 1;
                 grid-row: 4;
+                margin-top: 0;
                 
             }
         }
@@ -249,3 +267,112 @@ transition: .3s;
 }
 
     }
+
+    .main-article{
+        max-width: 89.8rem;
+    display: flex;
+            flex-direction: column;
+gap: 3.2rem;
+     
+&_container{
+display: flex;
+flex-direction: column;
+gap: 1.2rem;
+
+    &--text{
+     
+font-size: 1.6rem;
+line-height: 2rem;
+display: flex;
+align-items: center;
+gap: 0.8rem;
+
+    }
+
+    &--main-title{
+        font-family: 'Anek Latin';
+
+font-weight: 700;
+font-size: 40px;
+line-height: 44px;
+letter-spacing: -0.02em;
+
+
+    }
+    &--title{
+            display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $bp-medium) {
+     flex-direction: column;
+     gap: 2rem;
+      
+            
+        }
+    }
+
+    &--icons{
+        display: flex;
+        gap: 2.4rem;
+    }
+
+}
+&_blog{
+        
+
+
+            &--text{
+                font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+/* or 144% */
+
+
+color: rgba(6, 22, 47, 0.7);
+
+            }
+        }
+
+    }
+.article{
+    margin-top: 7rem;
+
+    max-width: 89.8rem;
+     
+    
+                  &_blogs{
+                    margin-top: 3.2rem;
+                    width: 100%;
+                     display: grid;
+
+              grid-template-columns: repeat(2, 1fr);
+   gap: 3.2rem;
+
+   @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
+
+
+    max-width: 55rem;
+
+  }
+  
+      &--img{
+        width: 100%;
+        height: 100%;
+        max-height: 25.7rem;
+        // max-width: 54rem;
+
+        @media only screen and (max-width: $bp-small) {
+      
+     
+      
+            
+        }
+    }      
+  
+
+                  }
+   
+
+
+}

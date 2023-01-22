@@ -1427,10 +1427,22 @@ html {
 .section-border {
   border: 1px solid #ECECEF; }
 
-.profile-settings img {
-  border-radius: 50%;
-  outline: 1.5px solid rgba(6, 22, 47, 0.2);
-  outline-offset: 6px; }
+.profile-settings {
+  margin-top: 5rem; }
+  .profile-settings .tablet-margin {
+    max-width: 89.8rem; }
+  .profile-settings_info {
+    display: flex;
+    gap: 2.4rem;
+    align-items: center; }
+    .profile-settings_info--text {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem; }
+  .profile-settings img {
+    border-radius: 50%;
+    outline: 1.5px solid rgba(6, 22, 47, 0.2);
+    outline-offset: 6px; }
 
 .booked-courses {
   margin: 5.2rem 0; }

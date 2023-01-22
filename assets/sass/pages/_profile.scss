@@ -3,9 +3,37 @@
     border: 1px solid #ECECEF;
 
 }
-
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid transparent;
+    border-radius: .25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
+}
 .profile-settings{
 
+    .tablet-margin{
+        max-width: 89.8rem;
+    }
+margin-top: 5rem;
+
+    &_info{
+        display: flex;
+        gap: 2.4rem;
+        align-items: center;
+
+        &--text{
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+    }
     img{
 
         border-radius: 50%;
@@ -13,6 +41,9 @@
         
   outline-offset: 6px;
     }
+    
+
+
 }
 .booked-courses{
     margin: 5.2rem 0;

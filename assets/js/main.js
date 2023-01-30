@@ -77,7 +77,8 @@ const toggleActive = (el) =>
 
 
 const body = document.querySelector("body");
-const MobileNavBtnEl = document.querySelector(".mobile-nav");
+const MobileNavBtnEl = document.querySelector(".menu-button-container", "main-nav--right_lang");
+// const MobileNavBtnEl = document.querySelector(".main-nav--right_lang");
 const headerEl = document.querySelector(".main-nav");
 MobileNavBtnEl.addEventListener("click", () => {
   headerEl.classList.toggle("nav-open"); 
@@ -87,17 +88,17 @@ MobileNavBtnEl.addEventListener("click", () => {
 let headerBox = document.querySelector(".header");
 let header = document.querySelector(".header-box");
 
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-      if(!headerBox.classList.contains("sticky") && !document.body.classList.contains("nav-open")){
-        headerBox.classList.add("sticky");
-}
-  } else {
-      if(headerBox.classList.contains("sticky") && !document.body.classList.contains("nav-open")){
-        headerBox.classList.remove("sticky");
-   }
-  }
-}
+// function myFunction() {
+//   if (window.pageYOffset > sticky) {
+//       if(!headerBox.classList.contains("sticky") && !document.body.classList.contains("nav-open")){
+//         headerBox.classList.add("sticky");
+// }
+//   } else {
+//       if(headerBox.classList.contains("sticky") && !document.body.classList.contains("nav-open")){
+//         headerBox.classList.remove("sticky");
+//    }
+//   }
+// }
 
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
@@ -162,3 +163,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
   calendar.render();
 });
+
+

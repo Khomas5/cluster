@@ -969,41 +969,11 @@ html {
   grid-column: 1/span 3;
 }
 
-.close {
-  display: none !important;
-}
-
 .header {
   position: relative;
   transition: 0.2s;
   width: 100%;
   background: #ffffff;
-}
-.header .menu-btn {
-  z-index: 99999;
-}
-.header .mobile-top {
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 2rem 3rem;
-}
-.header .mobile-nav {
-  z-index: 999;
-}
-.header .btn-mobile-nav {
-  display: block;
-  z-index: 9999;
-  outline: none;
-  border: none;
-  border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
-}
-.header .btn-mobile-nav-close {
-  display: none !important;
 }
 .header_box {
   display: flex;
@@ -1024,17 +994,6 @@ html {
 }
 .header_logo {
   height: 5.2rem;
-}
-.header .mobile-nav {
-  display: none;
-}
-@media only screen and (max-width: 75em) {
-  .header .mobile-nav {
-    display: block;
-  }
-}
-.header .close-btn {
-  display: none;
 }
 .header .main-nav {
   display: flex;
@@ -1084,6 +1043,15 @@ html {
     transform: translateX(-300px);
     display: flex;
     justify-content: center;
+  }
+  .header .main-nav_list_mobile-nav--btn {
+    display: block;
+    z-index: 9999;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
   }
 }
 .header .main-nav_link:link, .header .main-nav_link:visited {
@@ -1170,12 +1138,6 @@ html {
   display: none;
 }
 
-@media only screen and (max-width: 50em) {
-  .btn-mobile-nav {
-    display: block;
-  }
-}
-
 /* **************below 1200px********************* */
 @media (max-width: 75em) {
   .header {
@@ -1242,13 +1204,87 @@ html {
     transform: translateX(0px);
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin-top: 10rem;
   }
-  .nav-open .open {
-    display: none;
+  .main-nav_list li a {
+    font-size: 3.2rem;
   }
-  .nav-open .close {
+}
+.menu-button-container {
+  display: none;
+  cursor: pointer;
+  padding: 1.5rem 1.2rem;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button-container.main-nav--right_icon:hover {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: scale(1);
+}
+
+.menu-button-container.main-nav--right_icon {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #06162F;
+  position: absolute;
+  height: 1px;
+  width: 15px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu-button::before {
+  content: "";
+  margin-top: -5px;
+}
+
+.menu-button::after {
+  content: "";
+  margin-top: 5px;
+  width: 5px;
+  right: 0px;
+  height: 1px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+  height: 1px !important;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+  width: 15px;
+  height: 1px !important;
+}
+
+.menu-button-container {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .menu-button-container.main-nav--right_icon {
     display: flex;
+  }
+  .nav-open ~ .menu-button::after {
+    content: "";
+    margin-top: 5px;
+    width: 15px;
+    left: 0px;
   }
 }
 .footer {
@@ -1756,6 +1792,35 @@ html {
   border: 1px solid #ECECEF;
 }
 
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid transparent;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-settings {
+  margin-top: 5rem;
+}
+.profile-settings .tablet-margin {
+  max-width: 89.8rem;
+}
+.profile-settings_info {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+.profile-settings_info--text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
 .profile-settings img {
   border-radius: 50%;
   outline: 1.5px solid rgba(6, 22, 47, 0.2);

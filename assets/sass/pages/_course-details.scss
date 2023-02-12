@@ -1,121 +1,281 @@
-.course-details.tablet-margin{
-// display: flex;
+.details {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &_bg {
+    position: absolute;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background: linear-gradient(87.74deg, #06162f 3.46%, #1c4033 87.44%);
+  }
+
+  .tablet-margin {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 5.2rem;
-
-    .info-course{
-
-        .description{
-            margin-bottom: 4rem;
-
-            &_text{
-                padding-top: 2.4rem;
-                padding-bottom: 4rem;
-                font-weight: 400;
-font-size: 16px;
-line-height: 26px;
-/* or 162% */
+  }
 
 
-color: rgba(6, 22, 47, 0.6);
+    &_links{
+      display: flex;
+      gap: 2.4rem;
+      align-items: center;
+     
 
-            }
-            &_instructor{
-                display: flex;
-                background: rgba(6, 22, 47, 0.03);
-border-radius: 12px;
-padding: 3.2rem;
-gap: 3.2rem;
+      &--link{
+        text-decoration: none;
+        font-size: 16px;
+line-height: 20px;
 
-&--info{
+color: rgba(255, 255, 255, 0.6);
 
-    &_word{
-        font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-letter-spacing: -0.02em;
-
-color: #3970CE;
+ 
+      }
     }
-}
-            }
 
+    &_students {
+        display: flex;
+        gap: 2.4rem;
+        align-items: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: #ffffff;
+
+        &--attenders {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+          svg path {
+            fill: #ffffff;
+          }
         }
-        .feedback{
-            margin-bottom: 4rem;
+  
+        &--registers {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+          svg path {
+            fill: #28bb90;
+          }
+          &_green {
+            color: #28bb90;
+          }
+        }
+        &--language {
+          display: flex;
+          gap: 0.8rem;
+          align-items: center;
+        }
+      }
 
-    
-            &_title{
-                font-family: 'Anek Latin';
+    &_info {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    margin-top: 5.2rem;
+ &--container {
+      max-width: 66.8rem;
+      padding-left: 4.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }  
+
+    &--text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      &--payment {
+        &_start {
+          display: flex;
+          align-items: center;
+          gap: 1.6rem;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 26px;
+  
+          color: #ffffff;
+  
+          span {
+            font-family: "Anek Latin";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 15px;
+            letter-spacing: -0.02em;
+  
+            color: #3970ce;
+          }
+        }
+  
+        &_pay {
+          padding-top: 5.2rem;
+          display: flex;
+          gap: 2.4rem;
+  
+          p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            /* identical to box height */
+  
+            color: rgba(255, 255, 255, 0.6);
+          }
+        }
+      }
+     
+  &--companies{
+    margin-top: 3.2rem;
+    background: rgba(57, 112, 206, 0.1);
+border-radius: 12px;
+padding: 2.4rem 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    h3{
+        font-family: 'Anek Latin';
 font-style: normal;
 font-weight: 700;
 font-size: 20px;
 line-height: 22px;
-
+/* identical to box height */
 
 letter-spacing: -0.02em;
-            }
 
-            &_number{
-        
-font-weight: 500;
-color: rgba(6, 22, 47, 0.5);
+/* #06162F */
 
-            }
-            &_cards{
-                display: flex;
-                flex-direction: column;
-                gap: 1.6rem;
-                &--card{
+color: #06162F;
+    }
+    p{
+        max-width: 41.8rem;
+        font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
 
-                    background: #FFFFFF;
-border: 1px solid rgba(6, 22, 47, 0.1);
-border-radius: 16px;
-padding: 2.4rem 2.4rem 3.2rem;
 
-                    &_person{
-                        display: flex;
-                    }
-                }
-            }
-        }
+color: rgba(6, 22, 47, 0.6);
 
-        &_cards{
+    }
 
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: 1fr 1fr;
+    &_img{
+        display: flex;
+        align-items: center;
+        gap: 3.2rem;
+        padding-top: 2rem;
+    }
+  }
 
-            &--card{
-                max-width: 42.3rem;
-                display: flex;
-                flex-direction: column;
-                gap: 0.8rem;
-              
+    &--description {
+      margin-bottom: 4rem;
+
+      &_text {
+        padding-top: 2.4rem;
+        padding-bottom: 4rem;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        /* or 162% */
+
+        color: rgba(6, 22, 47, 0.6);
+      }
+      &_instructor {
+        display: flex;
+        background: rgba(6, 22, 47, 0.03);
+        border-radius: 12px;
+        padding: 3.2rem;
+        gap: 3.2rem;
+
+        &--info {
+          &_word {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: -0.02em;
+
+            color: #3970ce;
+          }
        
+      }
+    }
+ 
+  } 
+    &--feedback {
+      margin-bottom: 4rem;
 
-                &_img{
-                    border: 1px solid rgba(6, 22, 47, 0.1);
-                    border-radius: 16px;
-                    padding: 3.4rem 0;
-                    display: flex;
-                    justify-content: center;
-                
-                
-                }
-     
-            }
+      &_title {
+        font-family: "Anek Latin";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 22px;
 
+        letter-spacing: -0.02em;
+      }
+    &_cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        &--card {
+          background: #ffffff;
+          border: 1px solid rgba(6, 22, 47, 0.1);
+          border-radius: 16px;
+          padding: 2.4rem 2.4rem 3.2rem;
+
+          &_person {
+            display: flex;
+          }
         }
+      }
+    //   &_number {
+    //     font-weight: 500;
+    //     color: rgba(6, 22, 47, 0.5);
+    //   }
+     
+    }
+&--cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr 1fr;
+
+      &_card {
+        max-width: 42.3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        &--img {
+          border: 1px solid rgba(6, 22, 47, 0.1);
+          border-radius: 16px;
+          padding: 3.4rem 0;
+          display: flex;
+          justify-content: center;
+        }
+      }
     }
 
-    &_buy{
-        
-background: #FFFFFF;
-border: 1px solid rgba(6, 22, 47, 0.1);
-border-radius: 12px;
-    }
-}
 
+  }    
+
+   
   
+  &_buy {
+    background: #ffffff;
+    border: 1px solid rgba(6, 22, 47, 0.1);
+    border-radius: 12px;
+    margin-top: 5.2rem;
+    height: 100%;
+  }
+}

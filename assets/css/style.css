@@ -1,10 +1,10 @@
 body {
-  font-family: "Euclid Circular B";
+  font-family: circular-medium;
   font-size: 1.8rem;
   font-weight: 400;
   color: #06162F;
   line-height: 2.3rem;
-  font-family: Euclid Circular B; }
+  font-family: 'Euclid Circular B'; }
 
 *,
 *::before,
@@ -30,37 +30,16 @@ html {
       font-size: 40%; } }
 
 @font-face {
-  font-family: "Euclid Circular B";
-  src: url("../../fonts/Euclid Circular B Regular.ttf Circular B Regular.ttf");
+  font-family: circular-regular;
+  src: url("../../fonts/Euclid Circular B Regular.ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
-  font-family: "Euclid Circular B";
+  font-family: circular-medium;
   src: url("../../fonts/Euclid Circular B Medium.ttf Circular B Medium.ttf");
   font-weight: 500;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Euclid Circular B";
-  src: url("../../fonts/Euclid Circular B SemiBold.ttf Circular B SemiBold.ttf");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: Euclid Circular B;
-  src: url("../../fonts/Euclid Circular B Bold.ttf Circular B SemiBold.ttf");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Euclid Circular B";
-  src: url("../../fonts/Euclid Circular B Light.ttf Circular B SemiBold.ttf");
-  font-weight: 800;
   font-style: normal;
   font-display: swap; }
 
@@ -113,6 +92,11 @@ html {
   line-height: 4.4rem;
   letter-spacing: -0.02em;
   margin: 0; }
+  .heading-primary--main {
+    color: #FFFFFF;
+    border-left: 10px solid #28BB90;
+    padding: 0 3.2rem;
+    margin-left: -4.2rem; }
 
 .btn {
   color: #FFFFFF;
@@ -155,6 +139,17 @@ html {
   display: flex;
   align-items: center;
   gap: 0.8rem; }
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1rem; }
+  .links_link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none; }
 
 .section-courses {
   margin-top: 5.2rem; }
@@ -221,6 +216,9 @@ html {
       padding: 8px 12px;
       right: -3px;
       top: -3px; }
+
+.course {
+  text-decoration: none; }
 
 .section-swiper {
   height: 40.8rem; }
@@ -1186,74 +1184,193 @@ html {
       .section-claster_contact--paragraph {
         text-align: center; } }
 
-.course-details.tablet-margin {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 5.2rem; }
-  .course-details.tablet-margin .info-course .description {
-    margin-bottom: 4rem; }
-    .course-details.tablet-margin .info-course .description_text {
-      padding-top: 2.4rem;
-      padding-bottom: 4rem;
+.details {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+  .details_bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(87.74deg, #06162f 3.46%, #1c4033 87.44%); }
+  .details .tablet-margin {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5.2rem; }
+  .details_links {
+    display: flex;
+    gap: 2.4rem;
+    align-items: center; }
+    .details_links--link {
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 20px;
+      color: rgba(255, 255, 255, 0.6); }
+  .details_students {
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #ffffff; }
+    .details_students--attenders {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center; }
+      .details_students--attenders svg path {
+        fill: #ffffff; }
+    .details_students--registers {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center; }
+      .details_students--registers svg path {
+        fill: #28bb90; }
+      .details_students--registers_green {
+        color: #28bb90; }
+    .details_students--language {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center; }
+  .details_info {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 5.2rem; }
+    .details_info--container {
+      max-width: 66.8rem;
+      padding-left: 4.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem; }
+    .details_info--text {
       font-weight: 400;
       font-size: 16px;
       line-height: 26px;
-      /* or 162% */
-      color: rgba(6, 22, 47, 0.6); }
-    .course-details.tablet-margin .info-course .description_instructor {
+      color: rgba(255, 255, 255, 0.6); }
+    .details_info--payment_start {
       display: flex;
-      background: rgba(6, 22, 47, 0.03);
-      border-radius: 12px;
-      padding: 3.2rem;
-      gap: 3.2rem; }
-      .course-details.tablet-margin .info-course .description_instructor--info_word {
-        font-weight: 500;
-        font-size: 12px;
+      align-items: center;
+      gap: 1.6rem;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 26px;
+      color: #ffffff; }
+      .details_info--payment_start span {
+        font-family: "Anek Latin";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
         line-height: 15px;
         letter-spacing: -0.02em;
-        color: #3970CE; }
-  .course-details.tablet-margin .info-course .feedback {
-    margin-bottom: 4rem; }
-    .course-details.tablet-margin .info-course .feedback_title {
-      font-family: 'Anek Latin';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 22px;
-      letter-spacing: -0.02em; }
-    .course-details.tablet-margin .info-course .feedback_number {
-      font-weight: 500;
-      color: rgba(6, 22, 47, 0.5); }
-    .course-details.tablet-margin .info-course .feedback_cards {
+        color: #3970ce; }
+    .details_info--payment_pay {
+      padding-top: 5.2rem;
+      display: flex;
+      gap: 2.4rem; }
+      .details_info--payment_pay p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        /* identical to box height */
+        color: rgba(255, 255, 255, 0.6); }
+    .details_info--companies {
+      margin-top: 3.2rem;
+      background: rgba(57, 112, 206, 0.1);
+      border-radius: 12px;
+      padding: 2.4rem 3.2rem;
       display: flex;
       flex-direction: column;
-      gap: 1.6rem; }
-      .course-details.tablet-margin .info-course .feedback_cards--card {
-        background: #FFFFFF;
-        border: 1px solid rgba(6, 22, 47, 0.1);
-        border-radius: 16px;
-        padding: 2.4rem 2.4rem 3.2rem; }
-        .course-details.tablet-margin .info-course .feedback_cards--card_person {
-          display: flex; }
-  .course-details.tablet-margin .info-course_cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 1fr; }
-    .course-details.tablet-margin .info-course_cards--card {
-      max-width: 42.3rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem; }
-      .course-details.tablet-margin .info-course_cards--card_img {
-        border: 1px solid rgba(6, 22, 47, 0.1);
-        border-radius: 16px;
-        padding: 3.4rem 0;
+      gap: 1.2rem; }
+      .details_info--companies h3 {
+        font-family: 'Anek Latin';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 22px;
+        /* identical to box height */
+        letter-spacing: -0.02em;
+        /* #06162F */
+        color: #06162F; }
+      .details_info--companies p {
+        max-width: 41.8rem;
+        font-family: 'Euclid Circular B';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        /* or 150% */
+        color: rgba(6, 22, 47, 0.6); }
+      .details_info--companies_img {
         display: flex;
-        justify-content: center; }
-  .course-details.tablet-margin_buy {
-    background: #FFFFFF;
+        align-items: center;
+        gap: 3.2rem;
+        padding-top: 2rem; }
+    .details_info--description {
+      margin-bottom: 4rem; }
+      .details_info--description_text {
+        padding-top: 2.4rem;
+        padding-bottom: 4rem;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        /* or 162% */
+        color: rgba(6, 22, 47, 0.6); }
+      .details_info--description_instructor {
+        display: flex;
+        background: rgba(6, 22, 47, 0.03);
+        border-radius: 12px;
+        padding: 3.2rem;
+        gap: 3.2rem; }
+        .details_info--description_instructor--info_word {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 15px;
+          letter-spacing: -0.02em;
+          color: #3970ce; }
+    .details_info--feedback {
+      margin-bottom: 4rem; }
+      .details_info--feedback_title {
+        font-family: "Anek Latin";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 22px;
+        letter-spacing: -0.02em; }
+      .details_info--feedback_cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem; }
+        .details_info--feedback_cards--card {
+          background: #ffffff;
+          border: 1px solid rgba(6, 22, 47, 0.1);
+          border-radius: 16px;
+          padding: 2.4rem 2.4rem 3.2rem; }
+          .details_info--feedback_cards--card_person {
+            display: flex; }
+    .details_info--cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr 1fr; }
+      .details_info--cards_card {
+        max-width: 42.3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem; }
+        .details_info--cards_card--img {
+          border: 1px solid rgba(6, 22, 47, 0.1);
+          border-radius: 16px;
+          padding: 3.4rem 0;
+          display: flex;
+          justify-content: center; }
+  .details_buy {
+    background: #ffffff;
     border: 1px solid rgba(6, 22, 47, 0.1);
-    border-radius: 12px; }
+    border-radius: 12px;
+    margin-top: 5.2rem;
+    height: 100%; }
 
 .article-carousel {
   background-image: url(../img/events/blog1.png);
@@ -1460,7 +1577,8 @@ html {
       max-height: 25.7rem; }
 
 .section-border {
-  border: 1px solid #ECECEF; }
+  border: 1px solid #ececef;
+  width: 100%; }
 
 .card {
   position: relative;
@@ -1471,8 +1589,84 @@ html {
   background-color: #fff;
   background-clip: border-box;
   border: 0 solid transparent;
-  border-radius: .25rem;
-  margin-bottom: 1.5rem; }
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+  gap: 2rem;
+  padding: 5.2rem 0; }
+  .card_label {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    /* identical to box height, or 22px */
+    color: #06162F; }
+  .card_text {
+    max-width: 26.7rem; }
+
+.profile_buttons {
+  padding: 20px 32px;
+  gap: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+  transition: .3s;
+  cursor: pointer; }
+  .profile_buttons:hover {
+    scale: 1.05; }
+
+.change-btn {
+  display: flex;
+  gap: 1.5rem; }
+
+.cancel-btn {
+  background: #FFFFFF;
+  border: 1px solid rgba(6, 22, 47, 0.2);
+  color: #06162F; }
+
+.save-btn {
+  background: #06162F;
+  color: #FFFFFF; }
+
+.col-2 {
+  width: 55.2rem;
+  display: flex;
+  justify-content: space-between; }
+
+.mb-3 {
+  display: flex;
+  justify-content: space-between; }
+
+.change-btn_click {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+  font-family: 'Euclid Circular B'; }
+
+.change-btn_del {
+  color: #CF3A40; }
+
+.change-btn_upd {
+  color: #3970CE; }
+
+.col-sm-9 .form-control {
+  padding: 2rem 3.2rem;
+  gap: 1rem;
+  background: #FFFFFF;
+  border: 1px solid rgba(6, 22, 47, 0.1);
+  border-radius: 6px;
+  max-width: 100%;
+  width: 55.2rem; }
+
+.col-sm-9.text-secondary {
+  max-width: 55.2rem !important; }
+
+.card .row {
+  display: flex;
+  justify-content: space-between; }
 
 .profile-settings {
   margin-top: 5rem; }
@@ -1494,6 +1688,11 @@ html {
 .booked-courses {
   margin: 5.2rem 0; }
 
+.row.last-row {
+  display: flex;
+  justify-content: end;
+  gap: 2.4rem; }
+
 .order-history {
   margin-top: 5.2rem; }
   .order-history table {
@@ -1508,9 +1707,9 @@ html {
       /* identical to box height */
       letter-spacing: -0.02em;
       /* #06162F */
-      color: #06162F; }
+      color: #06162f; }
     .order-history table tr {
-      border-bottom: 1px solid #ECECEF; }
+      border-bottom: 1px solid #ececef; }
       .order-history table tr td {
         padding: 1.6rem 0;
         font-weight: 400;
@@ -1527,7 +1726,7 @@ html {
           font-size: 1.8rem;
           line-height: 2.3rem;
           /* identical to box height */
-          color: #3970CE;
+          color: #3970ce;
           border: none; }
     .order-history table tr:first-child,
     .order-history table tr:last-child {

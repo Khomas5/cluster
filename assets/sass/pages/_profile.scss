@@ -1,114 +1,198 @@
-.section-border{
-
-    border: 1px solid #ECECEF;
-
+.section-border {
+  border: 1px solid #ececef;
+  width: 100%;
 }
 .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 0 solid transparent;
-    border-radius: .25rem;
-    margin-bottom: 1.5rem;
-    // box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
-}
-.profile-settings{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid transparent;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+  gap: 2rem;
+  padding: 5.2rem 0;
+  // box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
 
-    .tablet-margin{
-        max-width: 89.8rem;
-    }
-margin-top: 5rem;
+  &_label{
 
-    &_info{
-        display: flex;
-        gap: 2.4rem;
-        align-items: center;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 120%;
+/* identical to box height, or 22px */
 
-        &--text{
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-    }
-    img{
-
-        border-radius: 50%;
-        outline: 1.5px solid rgba(6, 22, 47, 0.2);
-        
-  outline-offset: 6px;
-    }
-    
-
-
-}
-.booked-courses{
-    margin: 5.2rem 0;
-}
-
-.order-history{
-    margin-top: 5.2rem;
-
-    table{
-        width: 100%;
-        margin-top: 3.2rem;
-        border-collapse: collapse;
-        text-align: left;
-
-        th{
-            font-weight: 600;
-font-size: 1.8rem;
-line-height: 2.3rem;
-/* identical to box height */
-
-letter-spacing: -0.02em;
-
-/* #06162F */
 
 color: #06162F;
-        }
-
-        tr{
-            border-bottom: 1px solid #ECECEF;
-  
-
-            td{
-                padding: 1.6rem 0;
-                font-weight: 400;
-font-size: 1.8rem;
-line-height: 2.3rem;
-/* identical to box height */
-
-
-color: rgba(6, 22, 47, 0.6);
-                
-                .download-btn{
-                
-background: rgba(57, 112, 206, 0.1);
-border-radius: 4.4rem;
-padding: 1rem 1.6rem;
-gap: 1rem;
-font-weight: 500;
-font-size: 1.8rem;
-line-height: 2.3rem;
-/* identical to box height */
-
-
-color: #3970CE;
-border: none;
-
-            }
-            }
-       
-          
-      
-    } 
-    tr:first-child,
-    tr:last-child{
-        border-bottom: none;
-    }
+  }
+  &_text{
+    max-width: 26.7rem;
+  }
 }
+.profile_buttons{
+  padding: 20px 32px;
+gap: 16px;
+border-radius: 8px;
+
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+text-align: right;
+transition: .3s;
+
+cursor: pointer;
+ &:hover{
+  scale: 1.05;
+ }
+
+}
+.change-btn{
+  display: flex;
+  gap: 1.5rem;
+}
+
+.cancel-btn{
+ background: #FFFFFF;
+border: 1px solid rgba(6, 22, 47, 0.2);
+color: #06162F;
+
+}
+.save-btn{
+  background: #06162F;
+color: #FFFFFF;
+
+}
+.col-2{
+  width: 55.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.mb-3{
+display: flex;
+justify-content: space-between;
+}
+.change-btn_click {
+  text-decoration: none;
+  font-weight: 500;
+font-size: 14px;
+line-height: 100%;
+/* identical to box height, or 14px */
+font-family: 'Euclid Circular B';
+}
+.change-btn_del{
+
+  color:#CF3A40;
+}
+.change-btn_upd{
+ color: #3970CE;
+}
+.col-sm-9 .form-control{
+  padding: 2rem 3.2rem;
+  gap: 1rem;
+  background: #FFFFFF;
+border: 1px solid rgba(6, 22, 47, 0.1);
+border-radius: 6px;
+max-width:100%;
+width: 55.2rem;
+}
+.col-sm-9.text-secondary{
+max-width:55.2rem !important;
+
+}
+      
+
+.card .row {
+
+ display: flex;
+ justify-content: space-between;
+}
+.profile-settings {
+  .tablet-margin {
+    max-width: 89.8rem;
+  }
+  margin-top: 5rem;
+
+  &_info {
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+
+    &--text {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+  }
+  img {
+    border-radius: 50%;
+    outline: 1.5px solid rgba(6, 22, 47, 0.2);
+
+    outline-offset: 6px;
+  }
+}
+.booked-courses {
+  margin: 5.2rem 0;
+}
+.row.last-row{
+  display: flex;
+  justify-content: end;
+  gap: 2.4rem;
+}
+.order-history {
+  margin-top: 5.2rem;
+
+  table {
+    width: 100%;
+    margin-top: 3.2rem;
+    border-collapse: collapse;
+    text-align: left;
+
+    th {
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 2.3rem;
+      /* identical to box height */
+
+      letter-spacing: -0.02em;
+
+      /* #06162F */
+
+      color: #06162f;
+    }
+
+    tr {
+      border-bottom: 1px solid #ececef;
+
+      td {
+        padding: 1.6rem 0;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        /* identical to box height */
+
+        color: rgba(6, 22, 47, 0.6);
+
+        .download-btn {
+          background: rgba(57, 112, 206, 0.1);
+          border-radius: 4.4rem;
+          padding: 1rem 1.6rem;
+          gap: 1rem;
+          font-weight: 500;
+          font-size: 1.8rem;
+          line-height: 2.3rem;
+          /* identical to box height */
+
+          color: #3970ce;
+          border: none;
+        }
+      }
+    }
+    tr:first-child,
+    tr:last-child {
+      border-bottom: none;
+    }
+  }
 }

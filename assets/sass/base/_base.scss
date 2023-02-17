@@ -1,5 +1,5 @@
 
-
+@import url('https://fonts.cdnfonts.com/css/euclid-circular-b');
 
 
 $bp-largest: 75em;  //1200px
@@ -10,14 +10,53 @@ $bp-smaller: 28em; //450px
 $bp-smallest: 23.5em; //375px
 
 
+@font-face {
+    font-family: circular-regular;
+    src: url("../../fonts/EuclidCircularBMedium.ttf");
+    font-weight: 400;
+    font-style: normal;
+ }
+  
+  @font-face {
+    font-family: "circular-medium";
+    src: url("../../fonts/EuclidCircularBMedium.ttf");
+    font-weight: 500;
+
+  }
+  
+//   @font-face {
+//     font-family: "Euclid Circular B";
+//     src: url("../../fonts/Euclid\ Circular\ B\ SemiBold.ttf Circular B SemiBold.ttf");
+//     font-weight: 600;
+//     font-style: normal;
+//     font-display: swap; }
+
+//     @font-face {
+//         font-family: Euclid Circular B;
+//         src: url("../../fonts/Euclid\ Circular\ B\ Bold.ttf Circular B SemiBold.ttf");
+//         font-weight: 700;
+//         font-style: normal;
+//         font-display: swap; }
+
+//         @font-face {
+//             font-family: "Euclid Circular B";
+//             src: url("../../fonts/Euclid\ Circular\ B\ Light.ttf Circular B SemiBold.ttf");
+//             font-weight: 800;
+//             font-style: normal;
+//             font-display: swap; }
+
+    @font-face {
+        font-family: 'Product Sans';
+        src: url("../../fonts/Product\ Sans\ Regular.ttf");
+    }
 
 body{
-    font-family: circular-medium;
+    font-family: circular-regular;
   font-size: 1.8rem;
   font-weight: 400;
     color: #06162F;
     line-height: 2.3rem;
-    font-family: 'Euclid Circular B';
+    font-family: 'Euclid Circular B', sans-serif;
 
 }
 *, 
@@ -54,45 +93,6 @@ html{
     }
 }
 
-@font-face {
-    font-family: circular-regular;
-    src: url("../../fonts/Euclid\ Circular\ B\ Regular.ttf");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap; }
-  
-  @font-face {
-    font-family: circular-medium;
-    src: url("../../fonts/Euclid\ Circular\ B\ Medium.ttf Circular B Medium.ttf");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap; }
-  
-//   @font-face {
-//     font-family: "Euclid Circular B";
-//     src: url("../../fonts/Euclid\ Circular\ B\ SemiBold.ttf Circular B SemiBold.ttf");
-//     font-weight: 600;
-//     font-style: normal;
-//     font-display: swap; }
-
-//     @font-face {
-//         font-family: Euclid Circular B;
-//         src: url("../../fonts/Euclid\ Circular\ B\ Bold.ttf Circular B SemiBold.ttf");
-//         font-weight: 700;
-//         font-style: normal;
-//         font-display: swap; }
-
-//         @font-face {
-//             font-family: "Euclid Circular B";
-//             src: url("../../fonts/Euclid\ Circular\ B\ Light.ttf Circular B SemiBold.ttf");
-//             font-weight: 800;
-//             font-style: normal;
-//             font-display: swap; }
-
-    @font-face {
-        font-family: 'Product Sans';
-        src: url("../../fonts/Product\ Sans\ Regular.ttf");
-    }
 .tablet-margin{
     max-width: 1360px;
     margin: auto;

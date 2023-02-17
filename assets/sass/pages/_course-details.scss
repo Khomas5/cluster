@@ -1,3 +1,5 @@
+@import url("https://fonts.cdnfonts.com/css/euclid-circular-b");
+
 .details {
   position: relative;
   width: 100%;
@@ -102,8 +104,8 @@
         color: #ffffff;
 
         span {
-          font-family: "Anek Latin";
-          font-style: normal;
+          font-family: "Anek Latin", sans-serif;
+
           font-weight: 700;
           font-size: 14px;
           line-height: 15px;
@@ -155,6 +157,23 @@
         align-items: center;
         gap: 0.8rem;
       }
+      &_time {
+        display: flex;
+        gap: 1.6rem;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+
+        color: rgba(6, 22, 47, 0.7);
+      }
+      &_which-day {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+
+        color: rgba(6, 22, 47, 0.5);
+      }
       &_days {
         margin-top: 1.6rem;
         border: 1px solid rgba(6, 22, 47, 0.1);
@@ -172,14 +191,30 @@
           &_left {
             display: flex;
             align-items: center;
+            gap: 3rem;
           }
+        }
+        &--day-theme {
+          padding-left: 2.2rem;
+          font-weight: 600;
+          font-size: 1.6rem;
+          line-height: 2rem;
         }
       }
     }
 
     &--description {
-      margin-bottom: 4rem;
+      // margin-bottom: 4rem;
 
+      &_title {
+        font-family: "Anek Latin", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 22px;
+        /* identical to box height */
+
+        letter-spacing: -0.02em;
+      }
       &_text {
         padding-top: 2.4rem;
         padding-bottom: 4rem;
@@ -194,10 +229,23 @@
         display: flex;
         background: rgba(6, 22, 47, 0.03);
         border-radius: 12px;
-        padding: 3.2rem;
-        gap: 3.2rem;
+        padding: 0 3.2rem;
+
+        &--imgs {
+          background: rgba(255, 229, 0, 0.2);
+          border-radius: 906px 906px 0px 0px;
+        }
+        &--img {
+          position: relative;
+          top: -2.4rem;
+        }
 
         &--info {
+          display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+          padding: 3.2rem;
+
           &_word {
             font-weight: 500;
             font-size: 12px;
@@ -206,14 +254,29 @@
 
             color: #3970ce;
           }
+
+          &_name {
+            font-family: "Anek Latin", sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 22px;
+            /* identical to box height */
+
+            letter-spacing: -0.02em;
+          }
+          &_text {
+            padding-top: 0.8rem;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+          }
         }
       }
     }
     &--feedback {
-      margin-bottom: 4rem;
 
       &_title {
-        font-family: "Anek Latin";
+        font-family: "Anek Latin", sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
@@ -221,18 +284,53 @@
 
         letter-spacing: -0.02em;
       }
+      &_number {
+        padding-left: 0.8rem;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 22px;
+        letter-spacing: -0.02em;
+        color: rgba(6, 22, 47, 0.5);
+      }
       &_cards {
         display: flex;
         flex-direction: column;
         gap: 1.6rem;
+        padding-top: 2.4rem;
+
         &--card {
           background: #ffffff;
           border: 1px solid rgba(6, 22, 47, 0.1);
           border-radius: 16px;
           padding: 2.4rem 2.4rem 3.2rem;
+          display: grid;
+          gap: 1.6rem;
 
           &_person {
             display: flex;
+            gap: 1.6rem;
+            align-items: center;
+
+            &--name {
+              display: flex;
+              flex-direction: column;
+              gap: 0.6rem;
+            }
+            &--email {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 18px;
+              /* identical to box height */
+
+              letter-spacing: -0.02em;
+
+              color: rgba(6, 22, 47, 0.6);
+            }
+            &--feedback {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 26px;
+            }
           }
         }
       }
@@ -245,12 +343,42 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 1fr 1fr;
+ padding-top: 2.4rem;
+ gap: 2.5rem;
+
 
       &_card {
         max-width: 42.3rem;
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
+
+        &--txt{
+          font-weight: 600;
+font-size: 18px;
+line-height: 23px;
+/* identical to box height */
+
+letter-spacing: -0.02em;
+text-decoration: none;
+color: #06162F;
+
+        }
+        &--text{
+          display: flex;
+          align-items: center;
+          gap: 0.8rem;
+        }
+        &--span{
+          font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+
+letter-spacing: -0.02em;
+
+color: #28BB90;
+        }
 
         &--img {
           border: 1px solid rgba(6, 22, 47, 0.1);
@@ -269,6 +397,28 @@
     border-radius: 12px;
     margin-top: 5.2rem;
     height: 100%;
+
+
+    &--video{
+      position: relative;
+       padding: 0.3rem;
+
+       &_img{
+        width: 100%;
+        height: 100%;
+       }
+      &_btn{
+        position: absolute;
+        top: 40%;
+        left: 45%;
+      border-radius: 20px;
+        background: #06162F;
+        padding: 1.9rem 2.2rem;
+  
+      
+      }
+    }
+
   }
 }
 

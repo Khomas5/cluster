@@ -1,10 +1,27 @@
+@import url("https://fonts.cdnfonts.com/css/euclid-circular-b");
+@import url("https://fonts.cdnfonts.com/css/euclid-circular-b");
+@font-face {
+  font-family: circular-regular;
+  src: url("../../fonts/EuclidCircularBMedium.ttf");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "circular-medium";
+  src: url("../../fonts/EuclidCircularBMedium.ttf");
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'Product Sans';
+  src: url("../../fonts/Product Sans Regular.ttf"); }
+
 body {
-  font-family: circular-medium;
+  font-family: circular-regular;
   font-size: 1.8rem;
   font-weight: 400;
   color: #06162F;
   line-height: 2.3rem;
-  font-family: 'Euclid Circular B'; }
+  font-family: 'Euclid Circular B', sans-serif; }
 
 *,
 *::before,
@@ -28,24 +45,6 @@ html {
   @media only screen and (max-width: 37.5em) {
     html {
       font-size: 40%; } }
-
-@font-face {
-  font-family: circular-regular;
-  src: url("../../fonts/Euclid Circular B Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: circular-medium;
-  src: url("../../fonts/Euclid Circular B Medium.ttf Circular B Medium.ttf");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: 'Product Sans';
-  src: url("../../fonts/Product Sans Regular.ttf"); }
 
 .tablet-margin {
   max-width: 1360px;
@@ -1259,8 +1258,7 @@ html {
       line-height: 26px;
       color: #ffffff; }
       .details_info--payment_start span {
-        font-family: "Anek Latin";
-        font-style: normal;
+        font-family: "Anek Latin", sans-serif;
         font-weight: 700;
         font-size: 14px;
         line-height: 15px;
@@ -1294,6 +1292,19 @@ html {
       display: flex;
       align-items: center;
       gap: 0.8rem; }
+    .details_info--guide_time {
+      display: flex;
+      gap: 1.6rem;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: rgba(6, 22, 47, 0.7); }
+    .details_info--guide_which-day {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: rgba(6, 22, 47, 0.5); }
     .details_info--guide_days {
       margin-top: 1.6rem;
       border: 1px solid rgba(6, 22, 47, 0.1);
@@ -1307,58 +1318,137 @@ html {
           border-bottom: none; }
         .details_info--guide_days--day_left {
           display: flex;
-          align-items: center; }
-    .details_info--description {
-      margin-bottom: 4rem; }
-      .details_info--description_text {
-        padding-top: 2.4rem;
-        padding-bottom: 4rem;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 26px;
-        /* or 162% */
-        color: rgba(6, 22, 47, 0.6); }
-      .details_info--description_instructor {
+          align-items: center;
+          gap: 3rem; }
+      .details_info--guide_days--day-theme {
+        padding-left: 2.2rem;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2rem; }
+    .details_info--description_title {
+      font-family: "Anek Latin", sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 22px;
+      /* identical to box height */
+      letter-spacing: -0.02em; }
+    .details_info--description_text {
+      padding-top: 2.4rem;
+      padding-bottom: 4rem;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      /* or 162% */
+      color: rgba(6, 22, 47, 0.6); }
+    .details_info--description_instructor {
+      display: flex;
+      background: rgba(6, 22, 47, 0.03);
+      border-radius: 12px;
+      padding: 0 3.2rem; }
+      .details_info--description_instructor--imgs {
+        background: rgba(255, 229, 0, 0.2);
+        border-radius: 906px 906px 0px 0px; }
+      .details_info--description_instructor--img {
+        position: relative;
+        top: -2.4rem; }
+      .details_info--description_instructor--info {
         display: flex;
-        background: rgba(6, 22, 47, 0.03);
-        border-radius: 12px;
-        padding: 3.2rem;
-        gap: 3.2rem; }
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 3.2rem; }
         .details_info--description_instructor--info_word {
           font-weight: 500;
           font-size: 12px;
           line-height: 15px;
           letter-spacing: -0.02em;
           color: #3970ce; }
-    .details_info--feedback {
-      margin-bottom: 4rem; }
-      .details_info--feedback_title {
-        font-family: "Anek Latin";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 22px;
-        letter-spacing: -0.02em; }
-      .details_info--feedback_cards {
-        display: flex;
-        flex-direction: column;
+        .details_info--description_instructor--info_name {
+          font-family: "Anek Latin", sans-serif;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 22px;
+          /* identical to box height */
+          letter-spacing: -0.02em; }
+        .details_info--description_instructor--info_text {
+          padding-top: 0.8rem;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px; }
+    .details_info--feedback_title {
+      font-family: "Anek Latin", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 22px;
+      letter-spacing: -0.02em; }
+    .details_info--feedback_number {
+      padding-left: 0.8rem;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 22px;
+      letter-spacing: -0.02em;
+      color: rgba(6, 22, 47, 0.5); }
+    .details_info--feedback_cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      padding-top: 2.4rem; }
+      .details_info--feedback_cards--card {
+        background: #ffffff;
+        border: 1px solid rgba(6, 22, 47, 0.1);
+        border-radius: 16px;
+        padding: 2.4rem 2.4rem 3.2rem;
+        display: grid;
         gap: 1.6rem; }
-        .details_info--feedback_cards--card {
-          background: #ffffff;
-          border: 1px solid rgba(6, 22, 47, 0.1);
-          border-radius: 16px;
-          padding: 2.4rem 2.4rem 3.2rem; }
-          .details_info--feedback_cards--card_person {
-            display: flex; }
+        .details_info--feedback_cards--card_person {
+          display: flex;
+          gap: 1.6rem;
+          align-items: center; }
+          .details_info--feedback_cards--card_person--name {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem; }
+          .details_info--feedback_cards--card_person--email {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            /* identical to box height */
+            letter-spacing: -0.02em;
+            color: rgba(6, 22, 47, 0.6); }
+          .details_info--feedback_cards--card_person--feedback {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px; }
     .details_info--cards {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 1fr 1fr; }
+      grid-template-rows: 1fr 1fr;
+      padding-top: 2.4rem;
+      gap: 2.5rem; }
       .details_info--cards_card {
         max-width: 42.3rem;
         display: flex;
         flex-direction: column;
         gap: 0.8rem; }
+        .details_info--cards_card--txt {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 23px;
+          /* identical to box height */
+          letter-spacing: -0.02em;
+          text-decoration: none;
+          color: #06162F; }
+        .details_info--cards_card--text {
+          display: flex;
+          align-items: center;
+          gap: 0.8rem; }
+        .details_info--cards_card--span {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 18px;
+          /* identical to box height */
+          letter-spacing: -0.02em;
+          color: #28BB90; }
         .details_info--cards_card--img {
           border: 1px solid rgba(6, 22, 47, 0.1);
           border-radius: 16px;
@@ -1371,9 +1461,22 @@ html {
     border-radius: 12px;
     margin-top: 5.2rem;
     height: 100%; }
+    .details_buy--video {
+      position: relative;
+      padding: 0.3rem; }
+      .details_buy--video_img {
+        width: 100%;
+        height: 100%; }
+      .details_buy--video_btn {
+        position: absolute;
+        top: 40%;
+        left: 45%;
+        border-radius: 20px;
+        background: #06162F;
+        padding: 1.9rem 2.2rem; }
 
 .course-title {
-  font-family: 'Anek Latin';
+  font-family: "Anek Latin";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -1381,11 +1484,11 @@ html {
   /* identical to box height */
   letter-spacing: -0.02em;
   /* #06162F */
-  color: #06162F; }
+  color: #06162f; }
 
 .course-paragraph {
   padding-top: 1.2rem;
-  font-family: 'Euclid Circular B';
+  font-family: "Euclid Circular B";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

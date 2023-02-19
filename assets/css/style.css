@@ -1,17 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/euclid-circular-b");
 @import url("https://fonts.cdnfonts.com/css/euclid-circular-b");
 @font-face {
-  font-family: circular-regular;
-  src: url("../../fonts/EuclidCircularBMedium.ttf");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: "circular-medium";
-  src: url("../../fonts/EuclidCircularBMedium.ttf");
-  font-weight: 500; }
-
-@font-face {
   font-family: 'Product Sans';
   src: url("../../fonts/Product Sans Regular.ttf"); }
 
@@ -1437,7 +1426,7 @@ html {
           /* identical to box height */
           letter-spacing: -0.02em;
           text-decoration: none;
-          color: #06162F; }
+          color: #06162f; }
         .details_info--cards_card--text {
           display: flex;
           align-items: center;
@@ -1448,7 +1437,7 @@ html {
           line-height: 18px;
           /* identical to box height */
           letter-spacing: -0.02em;
-          color: #28BB90; }
+          color: #28bb90; }
         .details_info--cards_card--img {
           border: 1px solid rgba(6, 22, 47, 0.1);
           border-radius: 16px;
@@ -1461,6 +1450,11 @@ html {
     border-radius: 12px;
     margin-top: 5.2rem;
     height: 100%; }
+    .details_buy--tablet-margin {
+      padding: 0 2.4rem; }
+    .details_buy--price {
+      text-align: center;
+      padding: 2.4rem 0 1.6rem 0; }
     .details_buy--video {
       position: relative;
       padding: 0.3rem; }
@@ -1472,8 +1466,102 @@ html {
         top: 40%;
         left: 45%;
         border-radius: 20px;
-        background: #06162F;
+        background: #06162f;
         padding: 1.9rem 2.2rem; }
+    .details_buy--buttons {
+      display: grid;
+      gap: 1.6rem; }
+      .details_buy--buttons_addtocart-btn {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.6rem;
+        padding: 2rem 3.2rem;
+        background: #06162f;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+        grid-column: 1 / span 2; }
+      .details_buy--buttons_like-btn {
+        cursor: pointer;
+        grid-column: 3;
+        padding: 2rem;
+        gap: 1.6rem;
+        border-radius: 8px;
+        background: #ffffff;
+        border: 1px solid #06162f; }
+      .details_buy--buttons_buynow-btn {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.6rem;
+        grid-column: 1 / span 3;
+        grid-row: 2;
+        background: #ffffff;
+        border: 1px solid #06162f;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #06162f;
+        padding: 2rem; }
+    .details_buy--paying {
+      padding: 1.6rem 0 3.2rem 0;
+      font-family: "Euclid Circular B";
+      font-style: italic;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      /* or 143% */
+      text-align: center;
+      color: rgba(6, 22, 47, 0.6); }
+    .details_buy--include_title {
+      font-family: "Anek Latin", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 22px;
+      letter-spacing: -0.02em;
+      color: #06162f;
+      padding: 0 2.1rem;
+      border-left: 3px solid #06162f; }
+    .details_buy--include_list {
+      margin-top: 3.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+      list-style: none;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      /* identical to box height, or 143% */
+      color: rgba(6, 22, 47, 0.8); }
+      .details_buy--include_list li {
+        display: flex;
+        align-items: center; }
+      .details_buy--include_list svg {
+        margin-right: 1.7rem; }
+      .details_buy--include_list--span {
+        font-weight: 500;
+        color: #06162F; }
+    .details_buy--calendar {
+      margin-top: 4rem; }
+      .details_buy--calendar_title {
+        font-family: "Anek Latin", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 22px;
+        /* identical to box height */
+        letter-spacing: -0.02em;
+        /* #06162F */
+        color: #06162f;
+        padding: 0 2.1rem;
+        border-left: 3px solid #06162f; }
 
 .course-title {
   font-family: "Anek Latin";
@@ -1495,6 +1583,23 @@ html {
   line-height: 24px;
   /* or 150% */
   color: rgba(6, 22, 47, 0.6); }
+
+table {
+  border-collapse: collapse; }
+
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center; }
+
+th {
+  background-color: lightgray; }
+
+td.today {
+  background-color: lightblue; }
+
+td.selected {
+  background-color: yellow; }
 
 .article-carousel {
   background-image: url(../img/events/blog1.png);

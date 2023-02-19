@@ -1,5 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/euclid-circular-b");
-
+;
 .details {
   position: relative;
   width: 100%;
@@ -274,7 +274,6 @@
       }
     }
     &--feedback {
-
       &_title {
         font-family: "Anek Latin", sans-serif;
         font-style: normal;
@@ -343,9 +342,8 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 1fr 1fr;
- padding-top: 2.4rem;
- gap: 2.5rem;
-
+      padding-top: 2.4rem;
+      gap: 2.5rem;
 
       &_card {
         max-width: 42.3rem;
@@ -353,31 +351,30 @@
         flex-direction: column;
         gap: 0.8rem;
 
-        &--txt{
+        &--txt {
           font-weight: 600;
-font-size: 18px;
-line-height: 23px;
-/* identical to box height */
+          font-size: 18px;
+          line-height: 23px;
+          /* identical to box height */
 
-letter-spacing: -0.02em;
-text-decoration: none;
-color: #06162F;
-
+          letter-spacing: -0.02em;
+          text-decoration: none;
+          color: #06162f;
         }
-        &--text{
+        &--text {
           display: flex;
           align-items: center;
           gap: 0.8rem;
         }
-        &--span{
+        &--span {
           font-weight: 400;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
+          font-size: 14px;
+          line-height: 18px;
+          /* identical to box height */
 
-letter-spacing: -0.02em;
+          letter-spacing: -0.02em;
 
-color: #28BB90;
+          color: #28bb90;
         }
 
         &--img {
@@ -397,28 +394,157 @@ color: #28BB90;
     border-radius: 12px;
     margin-top: 5.2rem;
     height: 100%;
+    &--tablet-margin {
+      padding: 0 2.4rem;
+    }
+    &--price {
+      text-align: center;
+      padding: 2.4rem 0 1.6rem 0;
+    }
 
-
-    &--video{
+    &--video {
       position: relative;
-       padding: 0.3rem;
+      padding: 0.3rem;
 
-       &_img{
+      &_img {
         width: 100%;
         height: 100%;
-       }
-      &_btn{
+      }
+      &_btn {
         position: absolute;
         top: 40%;
         left: 45%;
-      border-radius: 20px;
-        background: #06162F;
+        border-radius: 20px;
+        background: #06162f;
         padding: 1.9rem 2.2rem;
-  
-      
       }
     }
 
+    &--buttons {
+      display: grid;
+      gap: 1.6rem;
+      &_addtocart-btn {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.6rem;
+        padding: 2rem 3.2rem;
+        background: #06162f;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+
+        color: #ffffff;
+        grid-column: 1 / span 2;
+      }
+      &_like-btn {
+        cursor: pointer;
+
+        grid-column: 3;
+
+        padding: 2rem;
+        gap: 1.6rem;
+        border-radius: 8px;
+        background: #ffffff;
+        border: 1px solid #06162f;
+      }
+
+      &_buynow-btn {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.6rem;
+
+        grid-column: 1 / span 3;
+        grid-row: 2;
+        background: #ffffff;
+        border: 1px solid #06162f;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+
+        color: #06162f;
+        padding: 2rem;
+      }
+    }
+    &--paying {
+      padding: 1.6rem 0 3.2rem 0;
+      font-family: "Euclid Circular B";
+      font-style: italic;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      /* or 143% */
+
+      text-align: center;
+
+      color: rgba(6, 22, 47, 0.6);
+    }
+
+    &--include {
+      &_title {
+        font-family: "Anek Latin", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 22px;
+        letter-spacing: -0.02em;
+        color: #06162f;
+        padding: 0 2.1rem;
+        border-left: 3px solid #06162f;
+      }
+      &_list {
+        margin-top: 3.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+       
+        list-style: none;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 143% */
+        
+        
+        color: rgba(6, 22, 47, 0.8);
+        li{
+          display: flex; 
+          align-items: center;
+
+        }
+        svg{
+            margin-right: 1.7rem;
+        }
+        &--span{
+font-weight: 500;
+color: #06162F;
+        }
+      }
+    }
+
+    &--calendar {
+      margin-top: 4rem;
+      &_title {
+        font-family: "Anek Latin", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 22px;
+        /* identical to box height */
+
+        letter-spacing: -0.02em;
+
+        /* #06162F */
+
+        color: #06162f;
+        padding: 0 2.1rem;
+        border-left: 3px solid #06162f;
+      }
+    }
   }
 }
 
@@ -447,4 +573,8 @@ color: #28BB90;
   /* or 150% */
 
   color: rgba(6, 22, 47, 0.6);
+}
+
+#calendar{
+  height: 20rem;
 }

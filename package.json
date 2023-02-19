@@ -20,7 +20,8 @@
     "postcss-cli": "^10.0.0"
   },
   "dependencies": {
+    "@uvarov.frontend/vanilla-calendar": "^2.4.0",
     "fullcalendar": "^6.0.2",
-    "fullcalendar-scheduler": "^6.0.2"
+    "fullcalendar-scheduler": "^6.1.4"
   }
 }

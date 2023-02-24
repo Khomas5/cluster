@@ -1444,9 +1444,18 @@ html {
   z-index: -1;
   background: linear-gradient(87.74deg, #06162f 3.46%, #1c4033 87.44%);
 }
+@media only screen and (max-width: 62.5em) {
+  .details_bg {
+    height: 100vh;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  .details_bg--decor {
+    display: none;
+  }
+}
 .details .tablet-margin {
   display: grid;
-  grid-template-columns: 2fr 1fr;
   gap: 5.2rem;
 }
 .details_links {
@@ -1493,11 +1502,29 @@ html {
   gap: 0.8rem;
   align-items: center;
 }
+.details_header {
+  grid-column: 1/span 2;
+  grid-row: 1/span 2;
+  margin-top: 5.2rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .details_header {
+    grid-row: 1;
+    grid-column: 1;
+  }
+}
 .details_info {
+  grid-column: 1/span 2;
+  grid-row: 3/span 4;
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  margin-top: 5.2rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .details_info {
+    grid-column: 1;
+    grid-row: 3;
+  }
 }
 .details_info--container {
   max-width: 66.8rem;
@@ -1505,6 +1532,11 @@ html {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .details_info--container {
+    max-width: 100%;
+  }
 }
 .details_info--text {
   font-weight: 400;
@@ -1557,6 +1589,8 @@ html {
   align-items: center;
   gap: 3.2rem;
   padding-top: 3.2rem;
+  width: 100%;
+  flex-wrap: wrap;
 }
 .details_info--guide .course-paragraph {
   display: flex;
@@ -1588,6 +1622,11 @@ html {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgba(6, 22, 47, 0.1);
+}
+@media only screen and (max-width: 37.5em) {
+  .details_info--guide_days--day {
+    flex-direction: column;
+  }
 }
 .details_info--guide_days--day:last-child {
   border-bottom: none;
@@ -1717,15 +1756,24 @@ html {
 .details_info--cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 1fr;
   padding-top: 2.4rem;
   gap: 2.5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .details_info--cards {
+    grid-template-columns: auto;
+  }
 }
 .details_info--cards_card {
   max-width: 42.3rem;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .details_info--cards_card {
+    max-width: 100%;
+  }
 }
 .details_info--cards_card--txt {
   font-weight: 600;
@@ -1757,34 +1805,87 @@ html {
   justify-content: center;
 }
 .details_buy {
+  grid-column: 3;
+  grid-row: 1/span 3;
   background: #ffffff;
   border: 1px solid rgba(6, 22, 47, 0.1);
   border-radius: 12px;
   margin-top: 5.2rem;
   height: 100%;
 }
+@media only screen and (max-width: 62.5em) {
+  .details_buy {
+    grid-row: 2;
+    grid-column: 1;
+    max-width: 437px;
+    justify-self: center;
+  }
+}
 .details_buy--tablet-margin {
   padding: 0 2.4rem;
 }
 .details_buy--price {
   text-align: center;
-  padding: 2.4rem 0 1.6rem 0;
+  padding: 0 0 1.6rem 0;
+}
+@media only screen and (max-width: 62.5em) {
+  .details_buy--price {
+    padding-top: 3.2rem;
+  }
 }
 .details_buy--video {
   position: relative;
   padding: 0.3rem;
 }
+@media only screen and (max-width: 62.5em) {
+  .details_buy--video {
+    display: none;
+  }
+}
+.details_buy--video_responsive {
+  display: none;
+  position: relative;
+}
+@media only screen and (max-width: 62.5em) {
+  .details_buy--video_responsive {
+    display: block;
+  }
+}
+.details_buy--video_responsive--img {
+  width: 100%;
+  height: 100%;
+}
+.details_buy--video_responsive--button {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  border-radius: 50%;
+  padding: 1.9rem 1.9rem 1.9rem 2.2rem;
+  background: #06162f;
+  align-items: center;
+  display: flex;
+  justify-items: center;
+}
+.details_buy--video_responsive--button svg {
+  width: 30px;
+  height: 30px;
+}
 .details_buy--video_img {
   width: 100%;
   height: 100%;
 }
-.details_buy--video_btn {
+.details_buy--video_button {
   position: absolute;
   top: 40%;
   left: 45%;
-  border-radius: 20px;
+  border-radius: 50%;
+  padding: 1.9rem 1.9rem 1.9rem 2.2rem;
   background: #06162f;
-  padding: 1.9rem 2.2rem;
+  align-items: center;
+  display: flex;
+  justify-items: center;
 }
 .details_buy--buttons {
   display: grid;
@@ -1874,7 +1975,7 @@ html {
 }
 .details_buy--include_list--span {
   font-weight: 500;
-  color: #06162F;
+  color: #06162f;
 }
 .details_buy--calendar {
   margin-top: 4rem;
@@ -1918,6 +2019,109 @@ html {
 
 #calendar {
   height: 20rem;
+}
+
+.wrapper {
+  background: #fff;
+  width: 389px;
+  height: 333px;
+  border-radius: 10px;
+}
+
+.wrapper header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 3rem 1rem;
+  border-bottom: 1px solid rgba(6, 22, 47, 0.1);
+}
+
+header .current-date {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #06162f;
+}
+
+header .icons span {
+  margin: 0 1px;
+  color: #878787;
+  font-size: 1.9rem;
+  cursor: pointer;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+
+header .icons span:last-child {
+  margin-right: -10px;
+}
+
+.calendar {
+  padding: 20px;
+}
+
+.calendar ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.calendar .days {
+  margin-bottom: 20px;
+}
+
+.calendar .weeks li {
+  font-family: "Euclid Circular B";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 11px;
+  /* identical to box height, or 139% */
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #06162f;
+}
+
+.calendar ul li {
+  position: relative;
+  width: 14.2857142857%;
+}
+
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.calendar .days li::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.days li:hover::before {
+  background: #f2f2f2;
+}
+
+.days li.active::before {
+  background-color: #9b59b6;
 }
 
 .article-carousel {

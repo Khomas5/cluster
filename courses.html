@@ -104,11 +104,12 @@
 
     <main class="details">
       <div class="details_bg">
-        <img src="./assets/img/course-details/graphic.png" />
+        <img class="details_bg--decor" src="./assets/img/course-details/graphic.png" />
       </div>
 
       <div class="tablet-margin">
-        <section class="details_info">
+
+        <section class="details_header">
 
           <div class="details_info--container">
             <div class="details_links">
@@ -142,6 +143,15 @@
 
               <a href="#" class="details_links--link">Self Positioning</a>
             </div>
+            <div class="details_buy--video_responsive">
+              <img class="details_buy--video_responsive--img" src="./assets/img/course-details/previewCourse.png" alt="" />
+              <div class="details_buy--video_responsive--button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14" viewBox="0 0 11 14" fill="none">
+                  <path d="M0 14L11 7L0 0V14Z" fill="white"/>
+                  </svg>
+                <!-- <img class="details_buy--video_button--btn" src="./assets/img/course-details/pressBtn.png"> -->
+              </div>
+           </div>
 
             <h1 class="heading-primary heading-primary--main">
               Self Positioning
@@ -222,6 +232,10 @@
             </div>
           </div>
 
+        </section>
+
+        <section class="details_info">
+          
           <div class="details_info--companies">
             <h3 class="course-title">
               This courses are trusted by this companies
@@ -646,8 +660,13 @@
 
         <section class="details_buy">
           <div class="details_buy--video">
-             <img class="details_buy--video_img" src="./assets/img/course-details/previewCourse.png" alt="" />
-             <img class="details_buy--video_btn" src="./assets/img/course-details/pressBtn.png">
+            <img class="details_buy--video_img" src="./assets/img/course-details/previewCourse.png" alt="" />
+            <div class="details_buy--video_button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14" viewBox="0 0 11 14" fill="none">
+                <path d="M0 14L11 7L0 0V14Z" fill="white"/>
+                </svg>
+              <!-- <img class="details_buy--video_button--btn" src="./assets/img/course-details/pressBtn.png"> -->
+            </div>
           </div>
           <div class="details_buy--tablet-margin">
         
@@ -698,7 +717,35 @@
           <div class="details_buy--calendar">
             <h2 class="details_buy--calendar_title">Dates this course is available on</h2>
             <div class="details_buy--tablet-margin">
-              <div id='calendar'></div>
+              <div class="wrapper">
+                <header>
+               
+               <div class="icons">
+                <span id="prev" class="material-symbols-rounded"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+                  <path d="M6.92587 12.5656L1.35547 6.99521L6.92587 1.4248" stroke="#06162F" stroke-width="1.8568" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg></span></div>   <p class="current-date"></p>
+                  <div class="icons">
+
+                
+                <span id="next" class="material-symbols-rounded"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+                  <path d="M1.07373 12.5656L6.64414 6.99521L1.07373 1.4248" stroke="#06162F" stroke-width="1.8568" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg></span>
+                 </div>
+                </header>
+                <div class="calendar">
+                  <ul class="weeks">
+                    <li>sun</li>
+                    <li>mon</li>
+                    <li>Tue</li>
+                    <li>Wed</li>
+                    <li>Thu</li>
+                    <li>Fri</li>
+                    <li>Sat</li>
+   
+                  </ul>
+                  <ul class="days"></ul>
+                </div>
+              </div>
 </div>
           </div>    
           
@@ -736,29 +783,6 @@
     </footer>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.0.2/index.global.min.js'></script>
     <script src="./assets/js/main.js"></script>
-
-    <script>
-      var calendar = new Calendar(calendarEl, {
-  initialDate: '2014-11-10',
-  initialView: 'timeGridWeek',
-  events: [
-    {
-      start: '2014-11-10T10:00:00',
-      end: '2014-11-10T16:00:00',
-      display: 'background'
-    }
-  ]
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  var calendarEl = document.getElementById('calendar');
-  var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: 'dayGridMonth'
-  });
-  calendar.render();
-});
-
-
-    </script>
+<script src="./assets/js/calendar.js"></script>
   </body>
 </html>

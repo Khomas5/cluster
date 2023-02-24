@@ -1,5 +1,4 @@
 @import url("https://fonts.cdnfonts.com/css/euclid-circular-b");
-;
 .details {
   position: relative;
   width: 100%;
@@ -14,12 +13,26 @@
     z-index: -1;
 
     background: linear-gradient(87.74deg, #06162f 3.46%, #1c4033 87.44%);
+
+    @media only screen and (max-width: $bp-large) {
+      height: 100vh;
+    }
+    &--decor {
+      @media only screen and (max-width: $bp-large) {
+        display: none;
+      }
+    }
   }
 
   .tablet-margin {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    // grid-template-columns: 2fr 1fr;
     gap: 5.2rem;
+
+    //   @media only screen and (max-width: $bp-large) {
+    //     grid-template-columns: 1fr;
+
+    // }
   }
 
   &_links {
@@ -71,18 +84,41 @@
       align-items: center;
     }
   }
+  &_header {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    margin-top: 5.2rem;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-row: 1;
+      grid-column: 1;
+    }
+  }
 
   &_info {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 4;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-column: 1;
+
+      grid-row: 3;
+      // margin-top: 5.2rem;
+    }
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    margin-top: 5.2rem;
+
     &--container {
       max-width: 66.8rem;
       padding-left: 4.2rem;
       display: flex;
       flex-direction: column;
       gap: 2.4rem;
+
+      @media only screen and (max-width: $bp-large) {
+        max-width: 100%;
+      }
     }
 
     &--text {
@@ -148,6 +184,8 @@
         align-items: center;
         gap: 3.2rem;
         padding-top: 3.2rem;
+        width: 100%;
+        flex-wrap: wrap;
       }
     }
 
@@ -185,6 +223,11 @@
           justify-content: space-between;
 
           border-bottom: 1px solid rgba(6, 22, 47, 0.1);
+
+          @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+          }
+
           &:last-child {
             border-bottom: none;
           }
@@ -341,15 +384,23 @@
     &--cards {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 1fr 1fr;
+      // grid-template-rows: 1fr 1fr;
       padding-top: 2.4rem;
       gap: 2.5rem;
+
+      @media only screen and (max-width: $bp-small) {
+        grid-template-columns: auto;
+      }
 
       &_card {
         max-width: 42.3rem;
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
+
+        @media only screen and (max-width: $bp-small) {
+          max-width: 100%;
+        }
 
         &--txt {
           font-weight: 600;
@@ -389,6 +440,16 @@
   }
 
   &_buy {
+    grid-column: 3;
+    grid-row: 1 / span 3;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-row: 2;
+      grid-column: 1;
+      max-width: 437px;
+      justify-self: center;
+    }
+
     background: #ffffff;
     border: 1px solid rgba(6, 22, 47, 0.1);
     border-radius: 12px;
@@ -399,24 +460,64 @@
     }
     &--price {
       text-align: center;
-      padding: 2.4rem 0 1.6rem 0;
+      padding: 0 0 1.6rem 0;
+
+      @media only screen and (max-width: $bp-large) {
+        padding-top: 3.2rem;
+      }
     }
 
     &--video {
       position: relative;
       padding: 0.3rem;
 
+      @media only screen and (max-width: $bp-large) {
+        display: none;
+      }
+
+      &_responsive {
+        display: none;
+        position: relative;
+        @media only screen and (max-width: $bp-large) {
+          display: block;
+        }
+        &--img {
+          width: 100%;
+          height: 100%;
+        }
+        &--button {
+          width: 60px;
+          height: 60px;
+          position: absolute;
+          top: 40%;
+          left: 45%;
+          border-radius: 50%;
+          padding: 1.9rem 1.9rem 1.9rem 2.2rem;
+          background: #06162f;
+          align-items: center;
+          display: flex;
+          justify-items: center;
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+
       &_img {
         width: 100%;
         height: 100%;
       }
-      &_btn {
+      &_button {
         position: absolute;
         top: 40%;
         left: 45%;
-        border-radius: 20px;
+        border-radius: 50%;
+        padding: 1.9rem 1.9rem 1.9rem 2.2rem;
         background: #06162f;
-        padding: 1.9rem 2.2rem;
+        align-items: center;
+        display: flex;
+        justify-items: center;
       }
     }
 
@@ -502,26 +603,24 @@
         display: flex;
         flex-direction: column;
         gap: 2.4rem;
-       
+
         list-style: none;
         font-weight: 400;
         font-size: 14px;
         line-height: 20px;
         /* identical to box height, or 143% */
-        
-        
-        color: rgba(6, 22, 47, 0.8);
-        li{
-          display: flex; 
-          align-items: center;
 
+        color: rgba(6, 22, 47, 0.8);
+        li {
+          display: flex;
+          align-items: center;
         }
-        svg{
-            margin-right: 1.7rem;
+        svg {
+          margin-right: 1.7rem;
         }
-        &--span{
-font-weight: 500;
-color: #06162F;
+        &--span {
+          font-weight: 500;
+          color: #06162f;
         }
       }
     }
@@ -575,6 +674,108 @@ color: #06162F;
   color: rgba(6, 22, 47, 0.6);
 }
 
-#calendar{
+#calendar {
   height: 20rem;
+}
+
+.wrapper {
+  background: #fff;
+  width: 389px;
+  height: 333px;
+  border-radius: 10px;
+}
+.wrapper header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 3rem 1rem;
+  border-bottom: 1px solid rgba(6, 22, 47, 0.1);
+}
+
+header .current-date {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #06162f;
+}
+header .icons span {
+  margin: 0 1px;
+  color: #878787;
+  font-size: 1.9rem;
+  cursor: pointer;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+
+// header .icons span svg:hover{
+//   background: #f2f2f2;
+
+// }
+header .icons span:last-child {
+  margin-right: -10px;
+}
+.calendar {
+  padding: 20px;
+}
+.calendar ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.calendar .days {
+  margin-bottom: 20px;
+}
+.calendar .weeks li {
+  font-family: "Euclid Circular B";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 11px;
+  /* identical to box height, or 139% */
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #06162f;
+}
+
+.calendar ul li {
+  position: relative;
+  width: calc(100% / 7);
+}
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.days li.inactive {
+  color: #aaa;
+}
+.days li.active {
+  color: #fff;
+}
+
+.calendar .days li::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.days li:hover::before {
+  background: #f2f2f2;
+}
+
+.days li.active::before {
+  background-color: #9b59b6;
 }

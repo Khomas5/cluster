@@ -15,7 +15,8 @@
     background: linear-gradient(87.74deg, #06162f 3.46%, #1c4033 87.44%);
 
     @media only screen and (max-width: $bp-large) {
-      height: 100vh;
+
+   height: 120vh;
     }
     &--decor {
       @media only screen and (max-width: $bp-large) {
@@ -57,6 +58,11 @@
     font-size: 14px;
     line-height: 26px;
     color: #ffffff;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+      align-items: flex-start;
+       }
 
     &--attenders {
       display: flex;
@@ -119,6 +125,9 @@
       @media only screen and (max-width: $bp-large) {
         max-width: 100%;
       }
+      @media only screen and (max-width: $bp-small) {
+        padding-left:0;
+         }
     }
 
     &--text {
@@ -156,6 +165,11 @@
         display: flex;
         gap: 2.4rem;
 
+        
+      @media only screen and (max-width: $bp-smaller) {
+     flex-wrap: wrap;
+      }
+
         p {
           font-weight: 400;
           font-size: 14px;
@@ -164,6 +178,15 @@
 
           color: rgba(255, 255, 255, 0.6);
         }
+
+        img{
+          
+      @media only screen and (max-width: $bp-smaller) {
+        max-width: 100%;
+      }
+        }
+
+       
       }
     }
 
@@ -240,7 +263,7 @@
         &--day-theme {
           padding-left: 2.2rem;
           font-weight: 600;
-          font-size: 1.6rem;
+          // font-size: 1.6rem;
           line-height: 2rem;
         }
       }
@@ -274,9 +297,18 @@
         border-radius: 12px;
         padding: 0 3.2rem;
 
+        @media only screen and (max-width: $bp-smaller) {
+          flex-direction: column;
+          align-items: center;
+        }
+
         &--imgs {
           background: rgba(255, 229, 0, 0.2);
           border-radius: 906px 906px 0px 0px;
+
+          @media only screen and (max-width: $bp-smaller) {
+           background: none;
+          }
         }
         &--img {
           position: relative;
@@ -288,6 +320,11 @@
           flex-direction: column;
           gap: 0.8rem;
           padding: 3.2rem;
+
+          @media only screen and (max-width: $bp-smaller) {
+            align-items: center;
+            padding-top: 0;
+          }
 
           &_word {
             font-weight: 500;
@@ -312,6 +349,13 @@
             font-weight: 400;
             font-size: 14px;
             line-height: 24px;
+
+            @media only screen and (max-width: $bp-smaller) {
+          text-align: center;
+          
+          
+            }
+  
           }
         }
       }
@@ -449,6 +493,12 @@
       max-width: 437px;
       justify-self: center;
     }
+    @media only screen and (max-width: $bp-smaller) {
+    margin-left: -3px;
+    }
+
+
+    
 
     background: #ffffff;
     border: 1px solid rgba(6, 22, 47, 0.1);
@@ -486,8 +536,8 @@
           height: 100%;
         }
         &--button {
-          width: 60px;
-          height: 60px;
+          // width: 60px;
+          // height: 60px;
           position: absolute;
           top: 40%;
           left: 45%;
@@ -497,9 +547,20 @@
           align-items: center;
           display: flex;
           justify-items: center;
+    
           svg {
             width: 30px;
             height: 30px;
+
+            @media only screen and (max-width: $bp-medium) {
+              width: 22px;
+              height: 22px;
+             }
+
+            @media only screen and (max-width: $bp-smaller) {
+             width: 16px;
+             height: 16px;
+            }
           }
         }
       }
@@ -539,6 +600,9 @@
 
         color: #ffffff;
         grid-column: 1 / span 2;
+
+     
+
       }
       &_like-btn {
         cursor: pointer;
@@ -550,6 +614,9 @@
         border-radius: 8px;
         background: #ffffff;
         border: 1px solid #06162f;
+
+    
+
       }
 
       &_buynow-btn {
@@ -570,6 +637,8 @@
 
         color: #06162f;
         padding: 2rem;
+
+  
       }
     }
     &--paying {
@@ -614,6 +683,9 @@
         li {
           display: flex;
           align-items: center;
+          gap: 0.5rem;
+  flex-wrap: wrap;
+          
         }
         svg {
           margin-right: 1.7rem;
@@ -621,6 +693,7 @@
         &--span {
           font-weight: 500;
           color: #06162f;
+
         }
       }
     }
@@ -680,9 +753,14 @@
 
 .wrapper {
   background: #fff;
-  width: 389px;
-  height: 333px;
+  // width: 389px;
+  // height: 333px;
   border-radius: 10px;
+
+  
+  @media only screen and (max-width: $bp-smaller) {
+   width: 100%;
+  }
 }
 .wrapper header {
   display: flex;

@@ -1,122 +1,95 @@
+.section-courses {
+  margin-top: 5.2rem;
+  &_titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.section-courses{
-
-   margin-top: 5.2rem;
-    &_titles{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    
-    }
-    
-        &_title{
-            font-family: 'Anek Latin';
+  &_title {
+    font-family: "Anek Latin";
     font-style: normal;
     font-weight: 700;
     font-size: 3.2rem;
     line-height: 3.5rem;
     letter-spacing: -0.02em;
+  }
 
-    
-        }
-    
-        &_seeAll{
-     
+  &_seeAll {
+    text-decoration: none;
+
     font-style: normal;
     font-weight: 500;
     font-size: 2rem;
     line-height: 2.5rem;
     cursor: pointer;
     color: rgba(6, 22, 47, 0.6);
+  }
+  &_cards {
+    padding-top: 2.3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.4rem;
 
+    @media only screen and (max-width: $bp-large) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: 1fr;
+    }
+
+    &--card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      position: relative;
+
+      &_img {
+        // width: 100%;
+        border: 1px solid rgba(6, 22, 47, 0.1);
+        border-radius: 16px;
+        padding: 3.4rem 0;
+        display: flex;
+        justify-content: center;
+
+        img {
+          @media only screen and (max-width: $bp-smaller) {
+            max-width: 10rem;
+          }
         }
-      &_cards{
-        padding-top: 2.3rem;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2.4rem;
-
-   
-        @media only screen and (max-width: $bp-large) {
-          grid-template-columns: repeat(2, 1fr);
-          
+      }
+    }
+    &--mark {
+      &_text {
+        color: #ffffff;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        letter-spacing: -2%;
+        font-weight: 500;
       }
 
-      @media only screen and (max-width: $bp-small) {
-        grid-template-columns: 1fr;
-        
+      &_yellow {
+        background-color: #fdd661;
+        position: absolute;
+        border-radius: 4px;
+        padding: 8px 12px;
+        right: -3px;
+        top: -3px;
+      }
+      &_green {
+        background-color: #28bb90;
+        position: absolute;
+        border-radius: 4px;
+        padding: 8px 12px;
+        right: -3px;
+        top: -3px;
+      }
     }
-      
-
-  
-   
-      &--card{
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-      
-   position: relative;
-        
-    
-        &_img{
-          // width: 100%;
-            border: 1px solid rgba(6, 22, 47, 0.1);
-    border-radius: 16px;
-    padding: 3.4rem 0;
-    display: flex;
-    justify-content: center;
-
-
-    img{
-          @media only screen and (max-width: $bp-smaller) {
-   max-width:10rem;
-
-
-  
-     
   }
-    }
+}
 
-        }
-      }    
-       &--mark{
-        &_text{
-         color: #FFFFFF; 
-         font-size: 1.4rem;
-         line-height: 1.8rem;
-         letter-spacing: -2%;
-         font-weight: 500;
-        }
-
-          &_yellow{
-            background-color: #FDD661;
-            position: absolute;
-            border-radius: 4px;
-            padding: 8px 12px;
-            right: -3px;
-            top: -3px;
-
-          
-
-
-          }
-          &_green{
-            background-color: #28BB90;
-          position: absolute;
-          border-radius: 4px;
-          padding: 8px 12px;
-          right: -3px;
-          top: -3px;
-
-
-
-          }
-        }
-       }
-    
-    }
-    
-    .course{
-      text-decoration: none;
-    }
+.course {
+  text-decoration: none;
+}

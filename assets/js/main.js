@@ -1,3 +1,5 @@
+
+// puzzle swiper
 var swiper = new Swiper(".mySwiper", {
 
   pagination: {
@@ -10,17 +12,7 @@ var swiper = new Swiper(".mySwiper", {
     },
   );
 
-//   let answers = document.querySelectorAll(".accordion");
-// answers.forEach((event) => {
-//   event.addEventListener("click", () => {
-//     if (event.classList.contains("active")) {
-//       event.classList.remove("active");
-//     } else {
-//       event.classList.add("active");
-//     }
-//   });
-// });
-
+// question
 var acc = document.getElementsByClassName("question");
 var i;
 
@@ -37,18 +29,7 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
-// var Swipes = new Swiper('.swiper-container', {
-//   loop: true,
-//    slidesPerView: 2,
-//   navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//   },
-//   pagination: {
-//       el: '.swiper-pagination',
-//   },
-// });
-
+// swiper
 
 var swiper = new Swiper(".my-swiper", {
   pagination: {
@@ -70,35 +51,29 @@ loop: true,
     spaceBetween: 24,
 });
 
-
-const toggleActive = (el) =>
-  document.getElementById(el).classList.toggle("active");
-
-
+// burger menu
+// const toggleActive = (el) =>
+//   document.getElementById(el).classList.toggle("active");
 
 const body = document.querySelector("body");
-const MobileNavBtnEl = document.querySelector(".menu-button-container", "main-nav--right_lang");
-// const MobileNavBtnEl = document.querySelector(".main-nav--right_lang");
+const MobileNavBtnEl = document.querySelector(".menu-button-container");
+
 const headerEl = document.querySelector(".main-nav");
+const headerlang = document.querySelector(".main-nav--right_lang");
+
+
 MobileNavBtnEl.addEventListener("click", () => {
   headerEl.classList.toggle("nav-open"); 
-  body.classList.toggle("blur");
-  body.classList.toggle("hidden-overflow");
-});
-let headerBox = document.querySelector(".header");
-let header = document.querySelector(".header-box");
+  // body.classList.toggle("blur");
+  // body.classList.toggle("hidden-overflow");
 
-// function myFunction() {
-//   if (window.pageYOffset > sticky) {
-//       if(!headerBox.classList.contains("sticky") && !document.body.classList.contains("nav-open")){
-//         headerBox.classList.add("sticky");
-// }
-//   } else {
-//       if(headerBox.classList.contains("sticky") && !document.body.classList.contains("nav-open")){
-//         headerBox.classList.remove("sticky");
-//    }
-//   }
-// }
+  document.body.classList.toggle('nav-open');
+});
+// let headerBox = document.querySelector(".header");
+// let header = document.querySelector(".header-box");
+
+
+//event calendar
 
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');

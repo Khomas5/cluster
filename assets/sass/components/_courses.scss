@@ -1,9 +1,8 @@
 .section-courses {
   margin-top: 5.2rem;
   &_titles {
-    display: flex;
+    @include align-center;
     justify-content: space-between;
-    align-items: center;
   }
 
   &_title {

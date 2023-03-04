@@ -24,8 +24,7 @@
   }
   &_btn {
     cursor: pointer;
-    display: flex;
-    align-items: center;
+    @include align-center;
     gap: 0.6rem;
     padding-top: 2.7rem;
     font-family: "Product Sans";
@@ -152,8 +151,7 @@
       }
     }
     &--btn {
-      display: flex;
-      align-items: center;
+        @include align-center;
       text-decoration: none;
       font-family: "Product Sans";
       font-style: normal;
@@ -205,8 +203,7 @@
     &--text {
       font-size: 1.6rem;
       line-height: 2rem;
-      display: flex;
-      align-items: center;
+      @include align-center;
       gap: 0.8rem;
     }
 

@@ -1,6 +1,5 @@
 .section-sponsors {
-  display: flex;
-  align-items: center;
+  @include align-center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;

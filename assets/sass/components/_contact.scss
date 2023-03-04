@@ -30,8 +30,7 @@
   }
   &_nav {
     padding-bottom: 3.2rem;
-    display: flex;
-    align-items: center;
+    @include align-center;
     gap: 0.4rem;
     font-weight: 400;
     font-size: 16px;

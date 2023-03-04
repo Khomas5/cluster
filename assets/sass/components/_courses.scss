@@ -40,10 +40,8 @@
     }
 
     &--card {
-      display: flex;
-      flex-direction: column;
+      @include flex-column; 
       gap: 0.8rem;
-
       position: relative;
 
       &_img {

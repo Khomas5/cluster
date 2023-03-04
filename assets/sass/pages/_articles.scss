@@ -1,378 +1,275 @@
 .article-carousel {
-        background-image: url(../img/events/blog1.png);
-           
+  background-image: url(../img/events/blog1.png);
+  width: 100%;
+  height: 100%;
+  height: 67vh;
+  background-size: cover;
+  background-position: center;
+  @media only screen and (max-width: $bp-medium) {
+    height: 60vh;
 
-        // width: 100vw;
-        width: 100%;
-        height: 100%;
-        height: 67vh;
-        background-size: cover;
-          background-position: center;
-        @media only screen and (max-width: $bp-medium) {
-            height: 60vh;     
-            // background-image: url(../../img/events/blog2.png);
-            background-position: center;
- background-image: url(../img/events/responsiveBlog.png);
-               
-           } 
-           
-        //    @media only screen and (max-width: $bp-smallest) {
+    background-position: center;
+    background-image: url(../img/events/responsiveBlog.png);
+  }
 
-    
-            
-        //    }
 
-           
+  .tablet-margin {
+    display: flex;
+    height: 100%;
 
-        
-        .tablet-margin{
-
-       display: flex;
-    //    justify-content: flex-start;
-    //    align-items: center;
-       height: 100%;
-
-        // height: 70vh;
-        // display: flex;
-        // justify-content: start;
-        // align-items: flex-start;
-
-        @media only screen and (max-width: $bp-medium) {
-        
-       align-items: flex-end;
-       padding-bottom: 4rem;
-         
-               
-           }
- }
- &_btn{
+    @media only screen and (max-width: $bp-medium) {
+      align-items: flex-end;
+      padding-bottom: 4rem;
+    }
+  }
+  &_btn {
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 0.6rem;
     padding-top: 2.7rem;
-    font-family: 'Product Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 1.6rem;
-line-height: 1.9rem;
+    font-family: "Product Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
 
-/* White */
+    /* White */
 
-color: #FFFFFF;
-text-decoration: none;
- }
-        &_text{
-        display: flex;
-        flex-direction: column;
-        // justify-content: flex-start;
-        // align-items: flex-start;
-        justify-content: center;
-        
-        color: #FFFFFF;
-        max-width: 43.5rem;
-        gap: 2.3rem;
-
-        // @media only screen and (max-width: $bp-medium) {
-        //     max-width: 43.5rem;
-
-     
-      
-            
-        // }
-
-
-        @media only screen and (max-width: $bp-small) {
-        
-         max-width: 100%;
-                    
-                }
-
-        &--title{
-
-            font-family: "Euclid Circular B";
-
-            font-weight: 700;
-font-size: 4.8rem;
-line-height: 6.1rem;
-
-/* White */
-
-color: #FFFFFF;
-        }
-
-        &--txt{
-            font-family: 'Euclid Circular B';
-font-style: normal;
-font-weight: 400;
-font-size: 1.8rem;
-line-height: 3rem;
-/* or 167% */
-
-
-color: rgba(255, 255, 255, 0.7);
-
-        }
-       
-        // text-align: start;
-        }
-    }
-
-    .articles {
-margin-top: 7rem;
-        .tablet-margin{ 
-            max-width: 1152px;
-              display: grid;
-
-              grid-template-columns: repeat(2, auto);
-          gap: 5.2rem;
-              grid-template-rows: repeat(4, auto);   
-
-
-              @media only screen and (max-width: $bp-small) {
-                grid-template-columns: 1fr;
-                justify-items: center;
-         
-          
-                
-            }
-            
-      }
-
-      
-
-    &_blog{
-        max-width: 54rem;
-        @media only screen and (max-width: $bp-small) {
-  max-width: 100%;
-      
-            
-        }
-  
-
-        &--1{ 
-            grid-column: 1;
-          grid-row: 1 / span 3;
-
-          
-          @media only screen and (max-width: $bp-small) {
-            grid-row: 1;
-            
-        }
-        }
-
-        &--2{
-            grid-column: 1;
-
-   
-            grid-row: 4/ span 2;
-
-            @media only screen and (max-width: $bp-small) {
-                grid-row: 2;
-                
-            }
-        }
-
-        &--3{
-            grid-column: 2;
-        margin-top: 5.2rem;
- 
-            grid-row: 1/ span 4;
-
-            @media only screen and (max-width: $bp-small) {
-                grid-column: 1;
-                grid-row: 3;
-                margin-top: 0;
-                
-            }
-        }
-
-
-        &--4{
-            grid-column: 2;
-            margin-top: 5.2rem;
-        
-            grid-row: 4 / span 3;
-
-            @media only screen and (max-width: $bp-small) {
-                grid-column: 1;
-                grid-row: 4;
-                margin-top: 0;
-                
-            }
-        }
-
-        &--img{
-            width: 100%;
-            max-height: 25.7rem;
-            max-width: 54rem;
-
-            @media only screen and (max-width: $bp-small) {
-            max-width: 100%;
-         
-          
-                
-            }
-        }
-        &--btn{
-            display: flex;
-       align-items: center;
-       text-decoration: none;
-       font-family: 'Product Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 1.8rem;
-line-height: 2.2rem;
-/* identical to box height */
-
-
-color: #3970CE;
-
-gap: 0.6rem;
-
-        }
-    }
-
-  
-&_btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 7rem;
-
-
-
-    &--button{
-        cursor: pointer;
-            border-radius: 8px;
-    padding: 2rem 3.2rem;
-    gap: 1.6rem;
-    background: #FFFFFF;
-    border: 1px solid rgba(6, 22, 47, 0.2);
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 600;
-font-size: 1.6rem;
-line-height: 2rem;
-font-family: 'Euclid Circular B';
+  }
+  &_text {
+    @include flex-column; 
+    justify-content: center;
 
-color: #06162F;
-transition: .3s;
+    color: #ffffff;
+    max-width: 43.5rem;
+    gap: 2.3rem;
 
-&:hover{
-    transform: translateY(-2px);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-    }
-}
-
+    @media only screen and (max-width: $bp-small) {
+      max-width: 100%;
     }
 
-    .main-article{
-        max-width: 89.8rem;
-    display: flex;
-            flex-direction: column;
-gap: 3.2rem;
-     
-&_container{
-display: flex;
-flex-direction: column;
-gap: 1.2rem;
-
-    &--text{
-     
-font-size: 1.6rem;
-line-height: 2rem;
-display: flex;
-align-items: center;
-gap: 0.8rem;
-
+    &--title {
+      font-family: "Euclid Circular B";
+      font-weight: 700;
+      font-size: 4.8rem;
+      line-height: 6.1rem;
+      color: #ffffff;
     }
 
-    &--main-title{
-        font-family: 'Anek Latin';
+    &--txt {
+      font-family: "Euclid Circular B";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 3rem;
+      /* or 167% */
 
-font-weight: 700;
-font-size: 40px;
-line-height: 44px;
-letter-spacing: -0.02em;
-
-
-    }
-    &--title{
-            display: flex;
-    justify-content: space-between;
-
-    @media only screen and (max-width: $bp-medium) {
-     flex-direction: column;
-     gap: 2rem;
-      
-            
-        }
+      color: rgba(255, 255, 255, 0.7);
     }
 
-    &--icons{
-        display: flex;
-        gap: 2.4rem;
-    }
-
-}
-&_blog{
-        
-
-
-            &--text{
-                font-weight: 400;
-font-size: 18px;
-line-height: 26px;
-/* or 144% */
-
-
-color: rgba(6, 22, 47, 0.7);
-
-            }
-        }
-
-    }
-.article{
-    margin-top: 7rem;
-
-    max-width: 89.8rem;
-     
-    
-                  &_blogs{
-                    margin-top: 3.2rem;
-                    width: 100%;
-                     display: grid;
-
-              grid-template-columns: repeat(2, 1fr);
-   gap: 3.2rem;
-
-   @media only screen and (max-width: $bp-small) {
-    grid-template-columns: 1fr;
-
-
-    max-width: 55rem;
 
   }
-  
-      &--img{
-        width: 100%;
-        height: 100%;
-        max-height: 25.7rem;
-        // max-width: 54rem;
+}
 
-        @media only screen and (max-width: $bp-small) {
-      
-     
-      
-            
-        }
-    }      
-  
+.articles {
+  margin-top: 7rem;
 
-                  }
-   
+  .tablet-margin {
+    max-width: 1152px;
+    display: grid;
 
+    grid-template-columns: repeat(2, auto);
+    gap: 5.2rem;
+    grid-template-rows: repeat(4, auto);
 
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+
+  &_blog {
+    max-width: 54rem;
+    @media only screen and (max-width: $bp-small) {
+      max-width: 100%;
+    }
+
+    &--1 {
+      grid-column: 1;
+      grid-row: 1 / span 3;
+
+      @media only screen and (max-width: $bp-small) {
+        grid-row: 1;
+      }
+    }
+
+    &--2 {
+      grid-column: 1;
+
+      grid-row: 4 / span 2;
+
+      @media only screen and (max-width: $bp-small) {
+        grid-row: 2;
+      }
+    }
+
+    &--3 {
+      grid-column: 2;
+      margin-top: 5.2rem;
+
+      grid-row: 1 / span 4;
+
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 1;
+        grid-row: 3;
+        margin-top: 0;
+      }
+    }
+
+    &--4 {
+      grid-column: 2;
+      margin-top: 5.2rem;
+
+      grid-row: 4 / span 3;
+
+      @media only screen and (max-width: $bp-small) {
+        grid-column: 1;
+        grid-row: 4;
+        margin-top: 0;
+      }
+    }
+
+    &--img {
+      width: 100%;
+      max-height: 25.7rem;
+      max-width: 54rem;
+
+      @media only screen and (max-width: $bp-small) {
+        max-width: 100%;
+      }
+    }
+    &--btn {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-family: "Product Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      color: #3970ce;
+      gap: 0.6rem;
+    }
+  }
+
+  &_btn {
+    @include flex-center;
+    margin-top: 7rem;
+
+    &--button {
+      cursor: pointer;
+      border-radius: 8px;
+      padding: 2rem 3.2rem;
+      gap: 1.6rem;
+      background: #ffffff;
+      border: 1px solid rgba(6, 22, 47, 0.2);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      font-family: "Euclid Circular B";
+
+      color: #06162f;
+      transition: 0.3s;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+    }
+  }
+}
+
+.main-article {
+  max-width: 89.8rem;
+  @include flex-column; 
+  gap: 3.2rem;
+
+  &_container {
+    @include flex-column; 
+    gap: 1.2rem;
+
+    &--text {
+      font-size: 1.6rem;
+      line-height: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    &--main-title {
+      font-family: "Anek Latin";
+
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 44px;
+      letter-spacing: -0.02em;
+    }
+    &--title {
+      display: flex;
+      justify-content: space-between;
+
+      @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+
+    &--icons {
+      display: flex;
+      gap: 2.4rem;
+    }
+  }
+  &_blog {
+    &--text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      /* or 144% */
+
+      color: rgba(6, 22, 47, 0.7);
+    }
+  }
+}
+.article {
+  margin-top: 7rem;
+  max-width: 89.8rem;
+
+  &_blogs {
+    margin-top: 3.2rem;
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: 1fr;
+
+      max-width: 55rem;
+    }
+
+    &--img {
+      width: 100%;
+      height: 100%;
+      max-height: 25.7rem;
+      // max-width: 54rem;
+
+      @media only screen and (max-width: $bp-small) {
+      }
+    }
+  }
 }

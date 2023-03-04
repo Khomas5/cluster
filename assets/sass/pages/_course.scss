@@ -1,114 +1,93 @@
-.section-claster{
+.section-claster {
+  &_courses {
+    padding: 2rem 0;
+  }
 
-
-    &_courses{
-        padding: 2rem 0;
-    }
- 
-    &_team{
-        margin: 0 auto;
-        display: flex;
-    align-items: center;
+  &_team {
+    margin: 0 auto;
+    @include align-center;
     max-width: 71.4rem;
     justify-content: space-between;
     gap: 2rem;
-   
-     
+
     @media only screen and (max-width: $bp-medium) {
-      flex-direction: column; 
+      flex-direction: column;
     }
 
+    &--text {
+      max-width: 43.7rem;
+      @include flex-column; 
 
-    &--text{
-        max-width: 43.7rem;
-        display: flex;
-        flex-direction: column;
-        gap: 2.4rem;
+      gap: 2.4rem;
 
-            
-    @media only screen and (max-width: $bp-medium) {
-    max-width: 100%;
+      @media only screen and (max-width: $bp-medium) {
+        max-width: 100%;
       }
 
-        &_1{
-            font-family: 'Anek Latin';
-font-style: normal;
-font-weight: 700;
-font-size: 4rem;
-line-height: 4.4rem;
-letter-spacing: -0.02em;
-        }
+      &_1 {
+        font-family: "Anek Latin";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 4.4rem;
+        letter-spacing: -0.02em;
+      }
 
-        &_2{
-            font-weight: 500;
-    font-size: 2rem;
-    line-height: 2rem;
-    color: rgba(6, 22, 47, 0.6);
-    display: flex;
-    justify-content: end;
- 
-        }
+      &_2 {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 2rem;
+        color: rgba(6, 22, 47, 0.6);
+        display: flex;
+        justify-content: end;
+      }
+    }
+  }
 
-    }
-    }
- 
- 
-    &_contact{
-        
+  &_contact {
     margin-top: 8rem;
-       background: rgba(57, 112, 206, 0.1);
-  
-       border-radius: 3.2rem;
-       padding: 5.2rem;
-       display: flex;
-    flex-direction: column;
+    background: rgba(57, 112, 206, 0.1);
+
+    border-radius: 3.2rem;
+    padding: 5.2rem;
+    @include flex-column; 
     align-items: center;
     gap: 1.6rem;
 
-    &--btn{
-        margin-top: 1.6rem;
-        background: #06162F;
-border-radius: 8px;
-font-weight: 600;
-font-size: 1.6rem;
-line-height: 2rem;
-text-decoration: none;
+    &--btn {
+      margin-top: 1.6rem;
+      background: #06162f;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      text-decoration: none;
 
-/* #FFFFFF */
-
-
+      /* #FFFFFF */
     }
 
+    &--title {
+      font-family: "Anek Latin";
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 3.5rem;
+      text-align: center;
+      letter-spacing: -0.02em;
+      max-width: 37.8rem;
 
-    &--title{
-        font-family: 'Anek Latin';
-        font-weight: 700;
-font-size: 3.2rem;
-line-height: 3.5rem;
-text-align: center;
-letter-spacing: -0.02em;
-max-width: 37.8rem;
-
-    
-@media only screen and (max-width: $bp-medium) {
-    max-width: 100%;
-
-
+      @media only screen and (max-width: $bp-medium) {
+        max-width: 100%;
+      }
     }
 
-    
-} 
+    &--paragraph {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
 
-    &--paragraph{
-        font-weight: 400;
-font-size: 1.6rem;
-line-height: 2.6rem;
-
-    
-@media only screen and (max-width: $bp-medium) {
-  text-align: center;
+      @media only screen and (max-width: $bp-medium) {
+        text-align: center;
+      }
+    }
   }
-    }
- 
-    }
- }
+}

@@ -2629,4 +2629,8 @@ header .icons span:last-child {
 .order-history table tr:first-child,
 .order-history table tr:last-child {
   border-bottom: none;
+}
+
+canvas {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

@@ -19,3 +19,29 @@
 @import "pages/articles";
 @import "pages/profile";
 
+canvas {
+    display: block;
+  }
+
+
+  @mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@mixin align-center {
+  display: flex;
+  align-items: center;
+
+}
+
+
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
